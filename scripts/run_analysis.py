@@ -11,8 +11,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from predmarkets.analysis import event_consistency, summary, to_frame   # noqa: E402
-from predmarkets.client import load_markets                            # noqa: E402
+from predmarkets.analysis import event_consistency, events_to_frame, summary, to_frame  # noqa: E402
+from predmarkets.client import fetch_events, load_markets              # noqa: E402
 from predmarkets.viz import plot_prob_distribution, plot_spread_vs_liquidity  # noqa: E402
 
 
@@ -25,7 +25,12 @@ def main() -> None:
     for k, v in summary(df).items():
         print(f"  {k:<22} {v:,.2f}" if isinstance(v, float) else f"  {k:<22} {v}")
 
-    arb = event_consistency(df)
+    # The arbitrage check needs whole baskets, so it comes from /events (each of
+    # which carries its full market list) rather than from the /markets page above.
+    print("\nFetching events with their complete market lists...")
+    ev_df = events_to_frame(fetch_events(200))
+    print(f"  {ev_df['event_id'].nunique()} events, {len(ev_df)} legs")
+    arb = event_consistency(ev_df)
     tradeable = int(arb["tradeable"].sum()) if not arb.empty else 0
     print(f"\nNeg-risk events off 1 at the mid: {len(arb)}"
           f"  |  still profitable after crossing the spread: {tradeable}")

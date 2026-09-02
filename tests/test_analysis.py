@@ -73,3 +73,56 @@ def test_underpriced_baskets_rank_alongside_overpriced_ones():
     out = event_consistency(to_frame(MARKETS + cheap))
     assert out.iloc[0]["event_title"] == "Cheap"   # 0.6 sum, biggest capturable edge
     assert out.iloc[0]["long_edge"] > 0
+
+
+def test_placeholder_legs_are_dropped():
+    """Polymarket ships untraded placeholder outcomes in multi-outcome events -
+    active=False, zero volume, spread 1.00, price pinned at 0.5/0.5. The EPL 2027
+    Champion event carries four ("Team A", "Team B", "Team C", "Other"), and summed
+    with the real legs they put the basket at 3.04 instead of 1.04."""
+    real = [{"groupItemTitle": "Arsenal", "outcomePrices": '["0.505","0.495"]',
+             "spread": 0.01, "volumeNum": 733964, "negRisk": True, "active": True,
+             "events": [{"id": "E1", "title": "EPL"}]},
+            {"groupItemTitle": "Chelsea", "outcomePrices": '["0.135","0.865"]',
+             "spread": 0.01, "volumeNum": 684221, "negRisk": True, "active": True,
+             "events": [{"id": "E1", "title": "EPL"}]}]
+    placeholders = [{"groupItemTitle": f"Team {c}", "outcomePrices": '["0.5","0.5"]',
+                     "spread": 1, "volumeNum": 0.0, "negRisk": True, "active": False,
+                     "events": [{"id": "E1", "title": "EPL"}]} for c in "ABC"]
+
+    assert len(to_frame(real + placeholders)) == 2
+    assert len(to_frame(real + placeholders, live_only=False)) == 5
+
+
+def test_partial_baskets_are_not_reported_as_arbitrage():
+    """A 50-outcome event seen five legs deep sums to ~0.01 and looks like a 99%
+    arbitrage. Only complete baskets are reported."""
+    from predmarkets.analysis import events_to_frame
+
+    legs = [{"groupItemTitle": str(i), "outcomePrices": f'["{0.02:.3f}","{0.98:.3f}"]',
+             "spread": 0.01, "volumeNum": 5000, "active": True} for i in range(5)]
+    event = {"id": "BIG", "title": "Fifty-outcome race", "negRisk": True, "markets": legs}
+
+    df = events_to_frame([event])
+    assert df["n_event_markets"].iloc[0] == 5      # counts the live legs it holds
+
+    # Pretend we only hold 3 of the 5 — the basket must not be called tradeable.
+    partial = df.iloc[:3].copy()
+    partial["n_event_markets"] = 5
+    out = event_consistency(partial)
+    assert out.empty or not out["complete"].any()
+
+
+def test_events_to_frame_counts_live_legs_only():
+    from predmarkets.analysis import events_to_frame
+
+    legs = [{"groupItemTitle": "A", "outcomePrices": '["0.6","0.4"]', "spread": 0.01,
+             "volumeNum": 1000, "active": True},
+            {"groupItemTitle": "B", "outcomePrices": '["0.4","0.6"]', "spread": 0.01,
+             "volumeNum": 1000, "active": True},
+            {"groupItemTitle": "Other", "outcomePrices": '["0.5","0.5"]', "spread": 1,
+             "volumeNum": 0, "active": False}]
+    df = events_to_frame([{"id": "E", "title": "T", "negRisk": True, "markets": legs}])
+    assert len(df) == 2 and df["n_event_markets"].iloc[0] == 2
+    out = event_consistency(df, threshold=0.0)
+    assert out["complete"].all()

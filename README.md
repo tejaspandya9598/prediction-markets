@@ -12,11 +12,45 @@ mutually-exclusive outcomes price at 0.5 / 0.4 / 0.2 (sum 1.1), shorting the bas
 locks in the 0.10 overround (minus fees). `event_consistency` scans every event for
 exactly this and ranks the deviations by size and volume.
 
-```
-Neg-risk arbitrage candidates (outcome prices off 1):
- event_title  n_outcomes  yes_sum  deviation   volume
-   The Match           3      1.10      +0.10    2,700
-```
+Getting a believable answer out of this takes three filters that the arithmetic
+alone does not suggest, and each of them was found by running it against the live
+book rather than by reasoning about it.
+
+**Whole baskets only.** The check is over events pulled from `/events`, which carry
+their complete market list. Assembling events by grouping a page of `/markets` gives
+you whichever legs happened to land in that page: the Democratic Nominee 2028 event
+has 51 outcomes, five of them showed up, they summed to 0.0095, and that reported as
+a 99% arbitrage.
+
+**Live legs only.** Polymarket carries untraded placeholders inside multi-outcome
+events — the EPL 2027 Champion event ships "Team A", "Team B", "Team C" and "Other",
+each `active=False`, zero volume, zero liquidity, spread quoted at 1.00 and price
+pinned at the 0.5/0.5 default. Four of those summed with 20 real legs put the basket
+at 3.04 instead of 1.04.
+
+**Net of the spread.** You buy the basket at the asks and sell it at the bids, so the
+edge is `1 - Σask` or `Σbid - 1`, not the mid-price deviation. On the UEFA event a
+5.8% dislocation at the mid survives as 0.7% after crossing 36 books.
+
+With all three, from a live run on 2026-09-02 (200 events, 3,367 live legs):
+
+| event | outcomes | Σ YES | deviation | net edge | volume |
+|---|--:|--:|--:|--:|--:|
+| Republican Presidential Nominee 2028 | 42 | 0.9265 | −0.0735 | **5.0%** | $694M |
+| Democratic Presidential Nominee 2028 | 51 | 0.9370 | −0.0630 | **3.4%** | $1,271M |
+| Pro Football: 2027 Champion | 32 | 1.0500 | +0.0500 | 1.8% | $49M |
+| F1 Drivers' Champion | 22 | 0.9710 | −0.0290 | 1.7% | $202M |
+| UEFA Champions League: 2027 Champion | 36 | 1.0575 | +0.0575 | 0.7% | $22M |
+| EPL: 2027 Champion | 20 | 1.0355 | +0.0355 | 0.3% | $14M |
+
+The sums now sit where a probability measure should, and the sign splits along a
+line worth noticing: **the sports books trade above 1 and the long-dated political
+books trade below it.** An overround on a season that settles within the year is the
+familiar bookmaker's margin. A basket at 0.9265 that pays 1.00 in 2028, though, is
+not free money — it is roughly 8% over about two and a quarter years, or ~3.4%
+annualised, which is what you would want for locking up collateral that long. Most
+of the "arbitrage" at the top of this table is the time value of money, and a scanner
+that reports it as edge is measuring the discount rate.
 
 ## What it computes
 

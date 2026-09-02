@@ -23,6 +23,13 @@ COLUMNS = ["question", "outcome", "yes", "no", "binary_sum", "spread", "volume",
 
 NO_EVENT = "<no-event>"
 
+# A leg with no two-sided market quotes 1.00 wide and sits at the 0.5/0.5 default.
+# Polymarket carries several of these in a multi-outcome event as placeholders -
+# the EPL 2027 Champion event ships "Team A", "Team B", "Team C" and "Other", all
+# active=False with zero volume and zero liquidity. Summed with the real legs they
+# put the basket at 3.04 instead of 1.04, which reads as a 200% arbitrage.
+MAX_LIVE_SPREAD = 0.999
+
 
 def _outcome_prices(market: dict):
     p = market.get("outcomePrices")
@@ -36,7 +43,15 @@ def _outcome_prices(market: dict):
     return p
 
 
-def to_frame(markets: list[dict]) -> pd.DataFrame:
+def _is_live(market: dict, spread: float) -> bool:
+    """Is there an actual two-sided market here, or only a placeholder row?"""
+    if market.get("active") is False:
+        return False
+    return spread < MAX_LIVE_SPREAD
+
+
+def to_frame(markets: list[dict], live_only: bool = True) -> pd.DataFrame:
+    """Flatten markets. `live_only` drops placeholder legs — see MAX_LIVE_SPREAD."""
     rows = []
     for m in markets:
         prices = _outcome_prices(m)
@@ -46,12 +61,15 @@ def to_frame(markets: list[dict]) -> pd.DataFrame:
             yes, no = float(prices[0]), float(prices[1])
         except (TypeError, ValueError):
             continue
+        spread = float(m.get("spread") or 0.0)
+        if live_only and not _is_live(m, spread):
+            continue
         event = (m.get("events") or [{}])[0]
         rows.append({
             "question": (m.get("question") or "")[:80],
             "outcome": m.get("groupItemTitle") or "Yes",
             "yes": yes, "no": no, "binary_sum": yes + no,
-            "spread": float(m.get("spread") or 0.0),
+            "spread": spread,
             "volume": float(m.get("volumeNum") or m.get("volume") or 0.0),
             "liquidity": float(m.get("liquidityNum") or m.get("liquidity") or 0.0),
             "neg_risk": bool(m.get("negRisk")),
@@ -67,6 +85,9 @@ def to_frame(markets: list[dict]) -> pd.DataFrame:
 def event_consistency(df: pd.DataFrame, threshold: float = 0.02) -> pd.DataFrame:
     """Neg-risk events whose mutually-exclusive YES prices sum far from 1.
 
+    Only events whose full outcome set is present are reported: a partial basket
+    always looks mispriced and never is.
+
     `deviation` is the mid-price dislocation. `long_edge` / `short_edge` are what
     survives crossing the quoted spread on every leg — buy the basket at the asks
     for 1 - Σask, sell it at the bids for Σbid - 1. `net_edge` is the better of the
@@ -74,9 +95,16 @@ def event_consistency(df: pd.DataFrame, threshold: float = 0.02) -> pd.DataFrame
     """
     rows = []
     neg = df[df["neg_risk"] & (df["event_id"] != NO_EVENT)]
+    has_counts = "n_event_markets" in df.columns
     for (_eid, title), g in neg.groupby(["event_id", "event_title"]):
         if len(g) < 2:
             continue
+        # A neg-risk basket only sums to 1 when you hold *every* leg. Grouping a
+        # page of /markets gives whichever legs landed in that page, and a
+        # 50-outcome event seen 5 legs deep sums to ~0.01 and reads as a 99%
+        # arbitrage. Events pulled from /events carry their true leg count.
+        expected = int(g["n_event_markets"].iloc[0]) if has_counts else len(g)
+        complete = len(g) >= expected > 0
         half = g["spread"] / 2.0
         yes_sum = g["yes"].sum()
         ask_sum = (g["yes"] + half).sum()
@@ -84,20 +112,47 @@ def event_consistency(df: pd.DataFrame, threshold: float = 0.02) -> pd.DataFrame
         long_edge = 1.0 - ask_sum        # buy every outcome, collect $1 at expiry
         short_edge = bid_sum - 1.0       # sell the basket, pay $1 at expiry
         net_edge = max(long_edge, short_edge, 0.0)
-        rows.append({"event_title": title, "n_outcomes": len(g), "yes_sum": yes_sum,
+        rows.append({"event_title": title, "n_outcomes": len(g),
+                     "n_event_markets": expected, "complete": complete,
+                     "yes_sum": yes_sum,
                      "deviation": yes_sum - 1.0, "ask_sum": ask_sum, "bid_sum": bid_sum,
                      "long_edge": long_edge, "short_edge": short_edge,
-                     "net_edge": net_edge, "tradeable": net_edge > 0.0,
+                     "net_edge": net_edge, "tradeable": complete and net_edge > 0.0,
                      "volume": g["volume"].sum()})
     out = pd.DataFrame(rows)
     if out.empty:
         return out
     # Rank on what you could actually capture, then on the raw dislocation. Sorting
     # on signed deviation buried the underpriced baskets, which are the long arb.
-    hits = out[out["deviation"].abs() > threshold]
+    hits = out[(out["deviation"].abs() > threshold) & out["complete"]]
     return hits.sort_values(["net_edge", "deviation"],
                             key=lambda c: c.abs() if c.name == "deviation" else c,
                             ascending=False)
+
+
+def events_to_frame(events: list[dict]) -> pd.DataFrame:
+    """Flatten `/events` payloads, keeping each event's complete market list.
+
+    Every row carries `n_event_markets`, the number of legs the event actually has,
+    so a basket assembled here can be checked for completeness rather than assumed.
+    """
+    rows = []
+    for ev in events:
+        markets = ev.get("markets") or []
+        for m in markets:
+            m = dict(m)
+            m.setdefault("events", [{"id": ev.get("id"), "title": ev.get("title")}])
+            m.setdefault("negRisk", ev.get("negRisk"))
+            rows.append(m)
+    df = to_frame(rows)
+    if df.empty:
+        df["n_event_markets"] = pd.Series(dtype=int)
+        return df
+    # Count the legs that survived the liveness filter, so "complete" means
+    # "every tradeable outcome", not "every row the API returned".
+    counts = df.groupby("event_id").size().to_dict()
+    df["n_event_markets"] = df["event_id"].astype(str).map(counts).fillna(0).astype(int)
+    return df
 
 
 def summary(df: pd.DataFrame) -> dict:

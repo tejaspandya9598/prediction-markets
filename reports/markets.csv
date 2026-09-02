@@ -1,0 +1,401 @@
+question,outcome,yes,no,binary_sum,spread,volume,liquidity,neg_risk,event_id,event_title
+US Open ATP: Marcos Giron vs Ignacio Buse,Yes,0.105,0.895,1.0,0.05,1505643.172107999,19886.5848,False,924353,US Open ATP: Marcos Giron vs Ignacio Buse
+Will John Fetterman win the 2028 Democratic presidential nomination?,John Fetterman,0.0015,0.9985,1.0,0.001,25558077.357834,1786380.98166,True,30829,Democratic Presidential Nominee 2028
+Will there be no change in Fed interest rates after the September 2026 meeting?,No change,0.435,0.565,1.0,0.01,19401672.372332033,565830.9694,True,481717,Fed Decision in September?
+Will the Fed increase interest rates by 25 bps after the September 2026 meeting?,25 bps increase,0.535,0.465,1.0,0.01,16269896.82578,598767.6716,True,481717,Fed Decision in September?
+Will Tulsi Gabbard win the 2028 US Presidential Election?,Tulsi Gabbard,0.0015,0.9985,1.0,0.001,35206904.328344,1680231.12936,True,31552,Presidential Election Winner 2028
+Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?,25 bps decrease,0.0055,0.9945,1.0,0.001,22441247.332403,1261756.08916,True,481717,Fed Decision in September?
+Philadelphia Phillies vs. Arizona Diamondbacks,Yes,0.0005,0.9995,1.0,0.001,506818.54356799985,659925.04542,False,920960,Philadelphia Phillies vs. Arizona Diamondbacks
+Baltimore Orioles vs. Colorado Rockies: O/U 11.5,O/U 11.5,0.1405,0.8595,1.0,0.119,482449.62387899996,372.62316,False,920959,Baltimore Orioles vs. Colorado Rockies
+Baltimore Orioles vs. Colorado Rockies,Yes,0.545,0.455,1.0,0.01,476449.3638449999,51101.7599,False,920959,Baltimore Orioles vs. Colorado Rockies
+Seattle Mariners vs. Boston Red Sox,Yes,0.845,0.155,1.0,0.01,465813.207044,12675.8264,False,920961,Seattle Mariners vs. Boston Red Sox
+Will Millwall FC win on 2026-09-02?,Millwall FC,0.0005,0.9995,1.0,0.001,423469.6713500002,344489.92277,True,878794,Millwall FC vs. Wrexham AFC
+Will OFI win on 2026-09-02?,OFI,0.0005,0.9995,1.0,0.001,409834.3631570002,106671.00097,True,925709,AEK vs. OFI
+Will the Fed increase interest rates by 50+ bps after the September 2026 meeting,50+ bps increase,0.0075,0.9925,1.0,0.001,11845590.877382005,1139788.97127,True,481717,Fed Decision in September?
+Will Shakhtar Donetsk win the 2026-27 UEFA Champions League Championship?,Shakhtar Donetsk,0.0015,0.9985,1.0,0.001,12665037.61,292610.139,True,659671,UEFA Champions League: 2027 Champion
+Will the Fed decrease interest rates by 50+ bps after the September 2026 meeting,50+ bps decrease,0.0015,0.9985,1.0,0.001,9837203.037784994,1460347.31651,True,481717,Fed Decision in September?
+Will Celtic FC win on 2026-09-02?,Celtic FC,0.9995,0.0005,1.0,0.001,285072.282105,258458.07341,True,879751,Celtic FC vs. Aberdeen FC
+US Open ATP: Fabian Marozsan vs Michael Zheng,Yes,0.135,0.865,1.0,0.01,372653.2665269998,74952.2459,False,924345,US Open ATP: Fabian Marozsan vs Michael Zheng
+Exact Score: AEK 0 - 0 OFI?,AEK 0 - 0 OFI,0.9995,0.0005,1.0,0.001,272601.68896400003,122052.55256,True,925726,AEK vs. OFI - Exact Score
+Will George Clooney win the 2028 Democratic presidential nomination?,George Clooney,0.0015,0.9985,1.0,0.001,43286386.850259,2812945.92352,True,30829,Democratic Presidential Nominee 2028
+Will Tropical Storm Saudel make landfall in Japan?,Japan,0.0005,0.9995,1.0,0.001,473885.11677200004,293974.99338,False,881103,Where will Tropical Storm Saudel make landfall?
+US Open ATP: Tomas Etcheverry vs Jacob Fearnley,Yes,0.645,0.355,1.0,0.01,256206.97081899995,240386.5982,False,944686,US Open ATP: Tomas Etcheverry vs Jacob Fearnley
+US Open WTA: Emma Navarro vs Caty McNally,Yes,0.975,0.025,1.0,0.01,254104.38885400014,85616.7749,False,944508,US Open WTA: Emma Navarro vs Caty McNally
+Will FC Bayern München win on 2026-09-02?,FC Bayern München,0.9995,0.0005,1.0,0.001,261124.54627400005,220784.18288,True,881426,VfL Osnabrück vs. FC Bayern München
+US Open ATP: Alexander Bublik vs Adrian Mannarino,Yes,0.755,0.245,1.0,0.01,248799.323893,59734.6259,False,944678,US Open ATP: Alexander Bublik vs Adrian Mannarino
+Will AEK vs. OFI end in a draw?,Draw (AEK vs. OFI),0.9995,0.0005,1.0,0.001,247190.10186999998,117381.56643,True,925709,AEK vs. OFI
+US Open ATP: Jesper de Jong vs Francesco Passaro,Yes,0.625,0.375,1.0,0.03,384433.144052,233331.3848,False,928117,US Open ATP: Jesper de Jong vs Francesco Passaro
+Will Kristi Noem win the 2028 Republican presidential nomination?,Kristi Noem,0.0015,0.9985,1.0,0.001,36348460.942099005,1890714.74572,True,31875,Republican Presidential Nominee 2028
+US Open ATP: Denis Shapovalov vs Luca Van Assche,Yes,0.715,0.285,1.0,0.03,210744.1782710003,218140.6898,False,940024,US Open ATP: Denis Shapovalov vs Luca Van Assche
+"US announces end of Iranian blockade by September 14, 2026?",September 14,0.045,0.955,1.0,0.01,692110.8947500003,185794.665,False,699735,US announces end of Iranian blockade by...?
+"US announces end of Iranian blockade by September 7, 2026?",September 7,0.0135,0.9865,1.0,0.001,1179942.597426,215701.65249,False,699735,US announces end of Iranian blockade by...?
+Will Grand Theft Auto VI Extended Look get less than 20 million views on week 1?,<20M,0.028,0.972,1.0,0.002,471783.4415489999,10698.87757,True,928113,# of views of Grand Theft Auto VI Extended Look on week 1?
+Zhangjiagang: Mitsuki Wei Kang Leong vs Koki Matsuda,Yes,0.885,0.115,1.0,0.01,192777.46829799985,6171.4757,False,947239,Zhangjiagang: Mitsuki Wei Kang Leong vs Koki Matsuda
+Will Levante win the 2026-27 LALIGA Championship?,Levante,0.0015,0.9985,1.0,0.001,257791.109,285033.39616,True,659548,LALIGA: 2027 Champion
+Will VfL Osnabrück win on 2026-09-02?,VfL Osnabrück,0.0005,0.9995,1.0,0.001,204389.310358,179513.03361,True,881426,VfL Osnabrück vs. FC Bayern München
+Burnley FC vs. Middlesbrough FC: O/U 2.5,O/U 2.5,0.0005,0.9995,1.0,0.001,190099.45582800006,169389.87905,False,880193,Burnley FC vs. Middlesbrough FC - More Markets
+Will Getafe win the 2026-27 LALIGA Championship?,Getafe,0.0015,0.9985,1.0,0.001,268690.55000000005,285679.48002,True,659548,LALIGA: 2027 Champion
+US Open ATP: Valentin Vacherot vs Kamil Majchrzak,Yes,0.545,0.455,1.0,0.01,188943.33882799995,253771.432,False,942908,US Open ATP: Valentin Vacherot vs Kamil Majchrzak
+"Will Bitcoin dip to $45,000 by December 31, 2026?","↓ 45,000",0.085,0.915,1.0,0.01,6179115.240420999,295956.0109,False,89502,What price will Bitcoin hit in 2026?
+Will Racing Santander win the 2026-27 LALIGA Championship?,Racing Santander,0.0015,0.9985,1.0,0.001,346901.73449899995,282804.37653,True,659548,LALIGA: 2027 Champion
+New York Mets vs. Tampa Bay Rays,Yes,0.375,0.625,1.0,0.01,184908.730003,557863.7906,False,920964,New York Mets vs. Tampa Bay Rays
+Will Deportivo La Coruña win the 2026-27 LALIGA Championship?,Deportivo La Coruña,0.0015,0.9985,1.0,0.001,252807.87500000003,276003.551,True,659548,LALIGA: 2027 Champion
+Will Moshe Feiglin be the next Prime Minister of Israel?,Moshe Feiglin,0.0015,0.9985,1.0,0.001,1782485.0923070004,231346.51922,True,81557,Prime Minister of Israel after the next election?
+Milwaukee Brewers vs. Chicago Cubs,Yes,0.575,0.425,1.0,0.01,172569.87392099996,392032.7256,False,920965,Milwaukee Brewers vs. Chicago Cubs
+US Open ATP: Lloyd Harris vs Stefanos Tsitsipas,Yes,0.355,0.645,1.0,0.01,164658.57108499997,281780.9574,False,944680,US Open ATP: Lloyd Harris vs Stefanos Tsitsipas
+VfL Osnabrück vs. FC Bayern München: O/U 5.5,O/U 5.5,0.0005,0.9995,1.0,0.001,165725.357678,115318.9398,False,881615,VfL Osnabrück vs. FC Bayern München - More Markets
+Will Manchester City win the 2026-27 UEFA Champions League Championship?,Manchester City,0.105,0.895,1.0,0.01,276532.99319099996,131580.9141,True,659671,UEFA Champions League: 2027 Champion
+US Open WTA: Oksana Selekhmeteva vs Kamilla Rakhimova,Yes,0.0005,0.9995,1.0,0.001,156085.98653800006,223121.9318,False,944502,US Open WTA: Oksana Selekhmeteva vs Kamilla Rakhimova
+US Open ATP: Jiri Lehecka vs Toby Samuel,Yes,0.715,0.285,1.0,0.01,153979.77397700003,141636.7137,False,940022,US Open ATP: Jiri Lehecka vs Toby Samuel
+1st Half Spread: Real Sociedad de Fútbol (-1.5),Real Sociedad de Fútbol 1st Half (-1.5),0.175,0.825,1.0,0.01,141532.86611299997,27632.6056,False,884343,Real Sociedad de Fútbol vs. RC Celta de Vigo - More Markets
+Seattle Mariners vs. Boston Red Sox: O/U 8.5,O/U 8.5,0.575,0.425,1.0,0.09,141046.72995900005,1037.9046,False,920961,Seattle Mariners vs. Boston Red Sox
+OFI leading at halftime?,OFI,0.0005,0.9995,1.0,0.001,135639.68169100003,57977.92007,True,925724,AEK vs. OFI - Halftime Result
+US Open ATP: Jaime Faria vs Carlos Alcaraz,Yes,0.085,0.915,1.0,0.01,190988.92424700002,167652.4187,False,944683,US Open ATP: Jaime Faria vs Carlos Alcaraz
+US Open WTA: Tatjana Maria vs Jelena Ostapenko,Yes,0.35,0.65,1.0,0.02,175334.01048800006,61240.1202,False,924119,US Open WTA: Tatjana Maria vs Jelena Ostapenko
+San Francisco Giants vs. Pittsburgh Pirates: O/U 8.5,O/U 8.5,0.545,0.455,1.0,0.01,132983.51229299998,182396.8301,False,920963,San Francisco Giants vs. Pittsburgh Pirates
+FC Luzern vs. FC Vaduz: O/U 3.5,O/U 3.5,0.0005,0.9995,1.0,0.001,132562.11578099997,45014.59976,False,941840,FC Luzern vs. FC Vaduz - More Markets
+Will the U.S. invade Iran before 2027?,Yes,0.155,0.845,1.0,0.01,64284212.98579205,887768.4948,False,73130,Will the U.S. invade Iran before 2027?
+Will Hubert Hurkacz win the 2026 Men's US Open?,Hubert Hurkacz,0.0005,0.9995,1.0,0.001,540938.1897430001,46509.75973,True,139236,2026 Men’s US Open Winner (Tennis)
+1st Half Spread: Lille OSC (-1.5),Lille OSC 1st Half (-1.5),0.165,0.835,1.0,0.03,122515.10584300001,7847.5462,False,884009,Toulouse FC vs. Lille OSC - More Markets
+Will Mike Pence win the 2028 Republican presidential nomination?,Mike Pence,0.0015,0.9985,1.0,0.001,43515346.90343101,1986690.9643,True,31875,Republican Presidential Nominee 2028
+S&P 500 (SPX) Up or Down on September 2?,Yes,0.9995,0.0005,1.0,0.001,118612.24467600002,23186.01742,False,947413,S&P 500 (SPX) Up or Down on September 2?
+Will Tim Walz win the 2028 US Presidential Election?,Tim Walz,0.0015,0.9985,1.0,0.001,44708179.44063402,2385457.43297,True,31552,Presidential Election Winner 2028
+Will Michelle Obama win the 2028 US Presidential Election?,Michelle Obama,0.0045,0.9955,1.0,0.001,18878845.634955,1208972.17967,True,31552,Presidential Election Winner 2028
+US Open WTA: Elina Svitolina vs Maya Joint,Yes,0.885,0.115,1.0,0.01,118087.431774,150471.272,False,945778,US Open WTA: Elina Svitolina vs Maya Joint
+US Open ATP: Zizou Bergs vs Carlos Taberner,Yes,0.9405,0.0595,1.0,0.019,165493.67356999996,38331.11926,False,924348,US Open ATP: Zizou Bergs vs Carlos Taberner
+Will Tomas Martin Etcheverry win the 2026 Men's US Open?,Tomas Martin Etcheverry,0.0005,0.9995,1.0,0.001,154000.0,82144.36694,True,139236,2026 Men’s US Open Winner (Tennis)
+"Will GPT-6 be released by September 30, 2026?","September 30, 2026",0.875,0.125,1.0,0.01,465755.6260479997,9694.6491,False,36307,GPT-6 released by…?
+Will Queens Park Rangers FC win on 2026-09-02?,Queens Park Rangers FC,0.9995,0.0005,1.0,0.001,109253.02219399999,191367.66498,True,878789,Queens Park Rangers FC vs. Cardiff City FC
+"Will GPT-6 be released by September 15, 2026?","September 15, 2026",0.875,0.125,1.0,0.01,127928.17547900001,27464.0476,False,36307,GPT-6 released by…?
+Will Middlesbrough FC win on 2026-09-02?,Middlesbrough FC,0.0005,0.9995,1.0,0.001,109213.58551899991,213052.95955,True,878797,Burnley FC vs. Middlesbrough FC
+Will Rafael Jodar win the 2026 Men's US Open?,Rafael Jodar,0.0005,0.9995,1.0,0.001,254493.90476399998,89428.39349,True,139236,2026 Men’s US Open Winner (Tennis)
+Exact Score: AEK 1 - 1 OFI?,AEK 1 - 1 OFI,0.0005,0.9995,1.0,0.001,106211.27279799996,44435.55664,True,925726,AEK vs. OFI - Exact Score
+Will A Just Russia – For Truth (SRZP) gain the most seats in the next Russian pa,A Just Russia – For Truth (SRZP),0.0015,0.9985,1.0,0.001,2033389.1979380003,536909.45286,True,149589,Which party will gain most seats in Russian Parliamentary Election?
+Will Augusto Cury win the 2026 Brazilian presidential election?,Augusto Cury,0.0165,0.9835,1.0,0.001,3592521.777221003,677282.75857,True,45915,Brazil Presidential Election
+Will West Bromwich Albion FC win on 2026-09-02?,West Bromwich Albion FC,0.0005,0.9995,1.0,0.001,101463.87103100002,117995.3162,True,878792,West Bromwich Albion FC vs. Charlton Athletic FC
+Will New Orleans Pelicans win the 2027 NBA Finals?,New Orleans Pelicans,0.0015,0.9985,1.0,0.001,840892.3259610002,171870.4354,True,478277,NBA: 2027 Champion
+Israel x Iran ceasefire continues through August 31?,August 31,0.9995,0.0005,1.0,0.001,3216437.0846370007,86938.11283,False,711714,Israel x Iran ceasefire continues through...?
+Will Grand Theft Auto VI Extended Look get between 20 and 22 million views on we,20-22M,0.545,0.455,1.0,0.01,233933.71235500003,7575.1781,True,928113,# of views of Grand Theft Auto VI Extended Look on week 1?
+Will Daniil Medvedev win the 2026 Men's US Open?,Daniil Medvedev,0.053,0.947,1.0,0.006,693528.8238939998,47296.46432,True,139236,2026 Men’s US Open Winner (Tennis)
+Will AEK win on 2026-09-02?,AEK,0.0005,0.9995,1.0,0.001,92849.853115,139321.27486,True,925709,AEK vs. OFI
+Will Rangers FC win on 2026-09-02?,Rangers FC,0.9995,0.0005,1.0,0.001,92956.530481,171149.0406,True,879753,Falkirk FC vs. Rangers FC
+Queens Park Rangers FC vs. Cardiff City FC: O/U 2.5,O/U 2.5,0.9995,0.0005,1.0,0.001,93044.008031,180491.0003,False,880196,Queens Park Rangers FC vs. Cardiff City FC - More Markets
+AEK vs. OFI: Draw at halftime?,Draw,0.9995,0.0005,1.0,0.001,91795.17845,91586.37009,True,925724,AEK vs. OFI - Halftime Result
+Will Alexander Zverev win the 2026 Men's US Open?,Alexander Zverev,0.2205,0.7795,1.0,0.007,729617.3610290003,37350.08941,True,139236,2026 Men’s US Open Winner (Tennis)
+Putin meets with Iranian officials by August 31?,Yes,0.9995,0.0005,1.0,0.001,226973.37068400002,295709.74943,False,663183,Putin meets with Iranian officials by August 31?
+Will Graham Platner win the 2028 Democratic presidential nomination?,Graham Platner,0.0015,0.9985,1.0,0.001,8503513.155158002,2510900.95374,True,30829,Democratic Presidential Nominee 2028
+Will Barcelona win the 2026-27 UEFA Champions League Championship?,Barcelona,0.175,0.825,1.0,0.01,630941.7714529997,280221.5976,True,659671,UEFA Champions League: 2027 Champion
+Will the Tennessee Titans win the 2027 NFL league championship?,Tennessee Titans,0.0045,0.9955,1.0,0.001,1443438.6386819996,386161.05768,True,202857,Pro Football: 2027 Champion
+Philadelphia Phillies vs. Arizona Diamondbacks: O/U 9.5,O/U 9.5,0.0005,0.9995,1.0,0.001,85637.73270599998,94817.16157,False,920960,Philadelphia Phillies vs. Arizona Diamondbacks
+Strait of Hormuz traffic returns to normal by September 30?,Yes,0.026,0.974,1.0,0.002,7496020.177912,659264.80769,False,660109,Strait of Hormuz traffic returns to normal by September 30?
+Will FC Midtjylland win on 2026-09-02?,FC Midtjylland,0.9995,0.0005,1.0,0.001,83975.487291,116189.41036,True,877286,Aarhus GF vs. FC Midtjylland
+Israel x Iran ceasefire continues through September 30?,September 30,0.855,0.145,1.0,0.01,878006.6132100002,85641.3353,False,711714,Israel x Iran ceasefire continues through...?
+Counter-Strike: paiN vs BIG (BO3) - IEM Beijing: Global Qualifier Playoffs,Match Winner,0.0005,0.9995,1.0,0.001,81586.728329,186178.01766,False,953914,Counter-Strike: paiN vs BIG (BO3) - IEM Beijing: Global Qualifier Playoffs
+Will Alex de Minaur win the 2026 Men's US Open?,Alex de Minaur,0.0225,0.9775,1.0,0.009,213931.623773,46492.95776,True,139236,2026 Men’s US Open Winner (Tennis)
+Will Lens win the 2026-27 UEFA Champions League Championship?,Lens,0.0025,0.9975,1.0,0.001,358786.560082,196984.0632,True,659671,UEFA Champions League: 2027 Champion
+Will Wrexham AFC win on 2026-09-02?,Wrexham AFC,0.9995,0.0005,1.0,0.001,80007.16840800001,121558.43099,True,878794,Millwall FC vs. Wrexham AFC
+Will Club Brugge win the 2026-27 UEFA Champions League Championship?,Club Brugge,0.0015,0.9985,1.0,0.001,217376.498466,286087.6104,True,659671,UEFA Champions League: 2027 Champion
+Will Barack Obama win the 2028 Democratic presidential nomination?,Barack Obama,0.0025,0.9975,1.0,0.001,34008950.812148035,2468128.75392,True,30829,Democratic Presidential Nominee 2028
+Will Zohran Mamdani win the 2028 Democratic presidential nomination?,Zohran Mamdani,0.0025,0.9975,1.0,0.001,38853235.42204403,2608963.29868,True,30829,Democratic Presidential Nominee 2028
+"Will Elon Musk post 140-159 tweets from August 28 to September 4, 2026?",140-159,0.003,0.997,1.0,0.002,161041.14973100007,47872.37296,True,907934,"Elon Musk # tweets August 28 - September 4, 2026?"
+1st Half Spread: RC Celta de Vigo (-1.5),RC Celta de Vigo 1st Half (-1.5),0.085,0.915,1.0,0.01,77328.42539599999,4263.2873,False,884343,Real Sociedad de Fútbol vs. RC Celta de Vigo - More Markets
+"Will Elon Musk post 140-159 tweets from August 28 to September 4, 2026?",140-159,0.0025,0.9975,1.0,0.001,161041.14973100007,47493.97146,True,907934,"Elon Musk # tweets August 28 - September 4, 2026?"
+1st Half Spread: RC Celta de Vigo (-1.5),RC Celta de Vigo 1st Half (-1.5),0.085,0.915,1.0,0.01,77328.42539599999,4263.2873,False,884343,Real Sociedad de Fútbol vs. RC Celta de Vigo - More Markets
+Toronto Blue Jays vs. Cleveland Guardians,Yes,0.555,0.445,1.0,0.01,77858.02842900001,358339.9731,False,920962,Toronto Blue Jays vs. Cleveland Guardians
+"Will GPT-6 be released by December 31, 2026?","December 31, 2026",0.935,0.065,1.0,0.01,252622.91014000002,15028.3748,False,36307,GPT-6 released by…?
+"Will Elon Musk post 160-179 tweets from August 28 to September 4, 2026?",160-179,0.138,0.862,1.0,0.002,147456.83264399998,26617.53625,True,907934,"Elon Musk # tweets August 28 - September 4, 2026?"
+US Open WTA: Iva Jovic vs Magdalena Frech,Yes,0.75,0.25,1.0,0.02,77741.66664300002,9699.0129,False,924123,US Open WTA: Iva Jovic vs Magdalena Frech
+Will Romeu Zema win the 2026 Brazilian presidential election?,Romeu Zema,0.0015,0.9985,1.0,0.001,6470349.434068001,927819.45423,True,45915,Brazil Presidential Election
+Grasshopper Club Zurich vs. FC St. Gallen 1879: O/U 3.5,O/U 3.5,0.0005,0.9995,1.0,0.001,73683.185023,33779.25727,False,937224,Grasshopper Club Zurich vs. FC St. Gallen 1879 - More Markets
+US Open ATP: James Duckworth vs Yibing Wu,Yes,0.435,0.565,1.0,0.01,73205.441995,116181.3708,False,944684,US Open ATP: James Duckworth vs Yibing Wu
+US Open ATP: Andrea Guerrieri vs Alex de Minaur,Yes,0.0005,0.9995,1.0,0.001,73409.995299,199268.46765,False,928118,US Open ATP: Andrea Guerrieri vs Alex de Minaur
+US Open WTA: Ann Li vs Donna Vekic,Yes,0.605,0.395,1.0,0.01,72216.225811,107373.6491,False,945777,US Open WTA: Ann Li vs Donna Vekic
+US Open ATP: Matteo Berrettini vs Mariano Navone,Yes,0.585,0.415,1.0,0.01,73773.37909399999,229438.4458,False,944687,US Open ATP: Matteo Berrettini vs Mariano Navone
+Will Real Madrid CF win on 2026-09-04?,Real Madrid CF,0.705,0.295,1.0,0.01,242027.53342299996,427286.1543,True,888703,Real Betis Balompié vs. Real Madrid CF
+Counter-Strike: Phantom vs OG (BO3) - Logitech G Play Connect Closed Qualifier P,Match Winner,0.585,0.415,1.0,0.01,69250.60571900004,17258.0592,False,952141,Counter-Strike: Phantom vs OG (BO3) - Logitech G Play Connect Closed Qualifier P
+Counter-Strike: paiN vs BIG - Map 2 Winner,Map 2 Winner,0.0005,0.9995,1.0,0.001,68827.58676299996,179555.39006,False,953914,Counter-Strike: paiN vs BIG (BO3) - IEM Beijing: Global Qualifier Playoffs
+"Putin out as President of Russia by September 30, 2026?","September 30, 2026",0.01,0.99,1.0,0.002,784804.747936,143019.16983,False,31195,Putin out as President of Russia by...?
+Will United Russia (ER) gain the most seats in the next Russian parliamentary el,United Russia (ER),0.705,0.295,1.0,0.01,9012495.646284001,516747.9927,True,149589,Which party will gain most seats in Russian Parliamentary Election?
+Will the Iranian regime fall before 2027?,Yes,0.065,0.935,1.0,0.01,25456945.812223982,772906.2798,False,72347,Will the Iranian regime fall before 2027?
+"T20 Asia Cup, Women: Indonesia vs Sri Lanka",Yes,0.0005,0.9995,1.0,0.001,67151.926951,117840.56966,False,947866,"T20 Asia Cup, Women: Indonesia vs Sri Lanka"
+Spread: Baltimore Orioles (-1.5),Spread -1.5,0.28,0.72,1.0,0.08,65911.60757599998,1772.9703,False,920959,Baltimore Orioles vs. Colorado Rockies
+"Will Bitcoin reach $85,000 in September?","↑ 85,000",0.315,0.685,1.0,0.01,96007.27445999999,30442.4578,False,946004,What price will Bitcoin hit in September?
+Baltimore Orioles vs. Colorado Rockies: O/U 10.5,O/U 10.5,0.177,0.823,1.0,0.046,65778.85055399999,242.1374,False,920959,Baltimore Orioles vs. Colorado Rockies
+Will Grand Theft Auto VI Extended Look get between 22 and 24 million views on we,22-24M,0.3795,0.6205,1.0,0.045,121871.01291399999,4605.46828,True,928113,# of views of Grand Theft Auto VI Extended Look on week 1?
+"Will the price of Bitcoin be above $76,000 on September 3?","76,000",0.905,0.095,1.0,0.01,89181.738961,22349.5104,False,921460,Bitcoin above ___ on September 3?
+"Will the price of Bitcoin be above $72,000 on September 3?","72,000",0.9975,0.0025,1.0,0.001,91669.355683,31213.89499,False,921460,Bitcoin above ___ on September 3?
+Spread: Tampa Bay Rays (-1.5),Spread -1.5,0.445,0.555,1.0,0.01,64827.816792,187712.3024,False,920964,New York Mets vs. Tampa Bay Rays
+Will Carlos Alcaraz win the 2026 Men's US Open?,Carlos Alcaraz,0.375,0.625,1.0,0.01,1318639.0846069984,40421.059,True,139236,2026 Men’s US Open Winner (Tennis)
+Aarhus GF vs. FC Midtjylland: O/U 2.5,O/U 2.5,0.0005,0.9995,1.0,0.001,63491.04635799999,97007.53036,False,881306,Aarhus GF vs. FC Midtjylland - More Markets
+Will Alex Michelsen win the 2026 Men's US Open?,Alex Michelsen,0.006,0.994,1.0,0.002,121877.97099999999,116580.1733,True,139236,2026 Men’s US Open Winner (Tennis)
+Will Burnley FC win on 2026-09-02?,Burnley FC,0.0005,0.9995,1.0,0.001,63068.70338900002,182076.85466,True,878797,Burnley FC vs. Middlesbrough FC
+Will Karen Khachanov win the 2026 Men's US Open?,Karen Khachanov,0.0015,0.9985,1.0,0.001,182269.371,74939.39764,True,139236,2026 Men’s US Open Winner (Tennis)
+US Open WTA: Magda Linette vs Francesca Jones,Yes,0.025,0.975,1.0,0.01,66633.83396,184752.2928,False,927950,US Open WTA: Magda Linette vs Francesca Jones
+Will Renan Santos win the 2026 Brazilian presidential election?,Renan Santos,0.0225,0.9775,1.0,0.001,12356011.973946,478753.07782,True,45915,Brazil Presidential Election
+Detroit Tigers vs. Minnesota Twins,Yes,0.485,0.515,1.0,0.01,61218.12766100002,436876.8557,False,920967,Detroit Tigers vs. Minnesota Twins
+"Will the price of Bitcoin be above $80,000 on September 3?","80,000",0.0245,0.9755,1.0,0.003,89101.08729400001,27361.90862,False,921460,Bitcoin above ___ on September 3?
+Will Magdalena Andersson be the next Prime Minister of Sweden?,Magdalena Andersson,0.785,0.215,1.0,0.01,406515.0838830001,74802.3555,True,166435,Next Prime Minister of Sweden
+"US announces end of Iranian blockade by September 21, 2026?",September 21,0.105,0.895,1.0,0.01,465647.8382939999,72534.0923,False,699735,US announces end of Iranian blockade by...?
+Will Liz Cheney win the 2028 Democratic presidential nomination?,Liz Cheney,0.0015,0.9985,1.0,0.001,38473813.02062199,2820545.93613,True,30829,Democratic Presidential Nominee 2028
+"Will Bitcoin dip to $57,500 in September?","↓ 57,500",0.0245,0.9755,1.0,0.001,77240.71459,52063.51908,False,946004,What price will Bitcoin hit in September?
+Millwall FC vs. Wrexham AFC: Both Teams to Score,Both Teams to Score,0.0005,0.9995,1.0,0.001,57404.129447,94258.36944,False,880194,Millwall FC vs. Wrexham AFC - More Markets
+Will FC Luzern win on 2026-09-02?,FC Luzern,0.9995,0.0005,1.0,0.001,56955.57743800001,75601.33041,True,941652,FC Luzern vs. FC Vaduz
+"Will Bitcoin dip to $76,000 on September 2?","↓ 76,000",0.0485,0.9515,1.0,0.019,56347.806387,9574.25781,False,951611,What price will Bitcoin hit on September 2?
+VfL Osnabrück vs. FC Bayern München: O/U 3.5,O/U 3.5,0.9995,0.0005,1.0,0.001,56861.78211799996,53459.35465,False,881615,VfL Osnabrück vs. FC Bayern München - More Markets
+Will CR Flamengo win on 2026-09-02?,CR Flamengo,0.815,0.185,1.0,0.01,56551.943838,159637.3896,True,891202,CR Flamengo vs. Mirassol FC
+VfL Osnabrück vs. FC Bayern München: O/U 4.5,O/U 4.5,0.9995,0.0005,1.0,0.001,71193.84661000001,118256.46952,False,881615,VfL Osnabrück vs. FC Bayern München - More Markets
+US Open WTA: Aryna Sabalenka vs Polina Iatcenko,Yes,0.955,0.045,1.0,0.01,62920.797712,72797.8912,False,944499,US Open WTA: Aryna Sabalenka vs Polina Iatcenko
+VfL Osnabrück vs. FC Bayern München: 1st Half O/U 2.5,1st Half O/U 2.5,0.9995,0.0005,1.0,0.001,54297.57590099998,108914.55498,False,881615,VfL Osnabrück vs. FC Bayern München - More Markets
+Will Charlton Athletic FC win on 2026-09-02?,Charlton Athletic FC,0.0005,0.9995,1.0,0.001,54131.101718,115141.1597,True,878792,West Bromwich Albion FC vs. Charlton Athletic FC
+Millwall FC vs. Wrexham AFC: O/U 2.5,O/U 2.5,0.9995,0.0005,1.0,0.001,53864.606365,78273.6225,False,880194,Millwall FC vs. Wrexham AFC - More Markets
+Will Oprah Winfrey win the 2028 Democratic presidential nomination?,Oprah Winfrey,0.0015,0.9985,1.0,0.001,54375857.19532902,2906643.33079,True,30829,Democratic Presidential Nominee 2028
+LoL: The Otter Side vs Francesinhas (BO5) - LPLOL Playoffs,Match Winner,0.9995,0.0005,1.0,0.001,66674.12768299997,59608.64316,False,920247,LoL: The Otter Side vs Francesinhas (BO5) - LPLOL Playoffs
+Will FC Thun win on 2026-09-02?,FC Thun,0.0005,0.9995,1.0,0.001,52723.31083400001,59081.6968,True,937118,FC Thun vs. Lausanne-Sport
+"Will Bitcoin dip to $70,000 in September?","↓ 70,000",0.305,0.695,1.0,0.01,67835.570373,35104.8727,False,946004,What price will Bitcoin hit in September?
+Baltimore Orioles vs. Colorado Rockies: O/U 12.5,O/U 12.5,0.0795,0.9205,1.0,0.039,52417.21920300001,728.20118,False,920959,Baltimore Orioles vs. Colorado Rockies
+Will Motherwell FC win on 2026-09-02?,Motherwell FC,0.9995,0.0005,1.0,0.001,52217.91386400002,126382.49312,True,879747,Motherwell FC vs. Dundee United FC
+Will the Cincinnati Bengals win the 2027 NFL league championship?,Cincinnati Bengals,0.0325,0.9675,1.0,0.001,1367606.7516550005,105301.77306,True,202857,Pro Football: 2027 Champion
+US Open WTA: Qinwen Zheng vs Yulia Putintseva,Yes,0.705,0.295,1.0,0.01,52088.88433800001,42229.3851,False,950430,US Open WTA: Qinwen Zheng vs Yulia Putintseva
+Will Marine Le Pen win the 2027 French presidential election?,Marine Le Pen,0.3565,0.6435,1.0,0.001,2104378.4490030003,182842.22426,True,79987,Next French Presidential Election
+Strait of Hormuz traffic returns to normal by September 15?,Yes,0.0045,0.9955,1.0,0.001,1166359.4597280002,230027.79505,False,830255,Strait of Hormuz traffic returns to normal by September 15?
+VfL Osnabrück vs. FC Bayern München: Both Teams to Score,Both Teams to Score,0.9995,0.0005,1.0,0.001,51196.30300900002,77308.88565,False,881615,VfL Osnabrück vs. FC Bayern München - More Markets
+Will Sofia Kenin win the 2026 Women’s US Open?,Sofia Kenin,0.0005,0.9995,1.0,0.001,259420.73999899998,109446.78491,True,139255,2026 Women’s US Open Winner (Tennis)
+US Open ATP: Dino Prizmic vs Tommy Paul,Yes,0.175,0.825,1.0,0.01,51603.11203300001,163517.1763,False,940021,US Open ATP: Dino Prizmic vs Tommy Paul
+Will the highest temperature in Miami be between 88-89°F on September 2?,88-89°F,0.0165,0.9835,1.0,0.023,52099.52037299999,1914.05084,True,940387,Highest temperature in Miami on September 2?
+Will CD Cuenca win on 2026-09-02?,CD Cuenca,0.45,0.55,1.0,0.04,50575.188735,8438.1611,True,935624,CD Cuenca vs. Guayaquil City FC
+Will JD Vance win the 2028 US Presidential Election?,JD Vance,0.2535,0.7465,1.0,0.001,16006721.465527983,421312.4982,True,31552,Presidential Election Winner 2028
+Will Josh Shapiro win the 2028 Democratic presidential nomination?,Josh Shapiro,0.0475,0.9525,1.0,0.001,9663107.368018994,466858.24678,True,30829,Democratic Presidential Nominee 2028
+Will Flávio Bolsonaro win the 2026 Brazilian presidential election?,Flávio Bolsonaro,0.4065,0.5935,1.0,0.001,9475589.834019002,209034.06376,True,45915,Brazil Presidential Election
+"Will Bitcoin reach $100,000 in September?","↑ 100,000",0.028,0.972,1.0,0.004,142721.86695,44562.46123,False,946004,What price will Bitcoin hit in September?
+"Will Bitcoin dip to $60,000 in September?","↓ 60,000",0.046,0.954,1.0,0.002,81209.84989399998,30931.19354,False,946004,What price will Bitcoin hit in September?
+Will James Talarico win the 2028 US Presidential Election?,James Talarico,0.0055,0.9945,1.0,0.001,7052694.675981998,751855.63128,True,31552,Presidential Election Winner 2028
+Will Paris Saint-Germain win the 2026-27 UEFA Champions League Championship?,Paris Saint-Germain,0.135,0.865,1.0,0.01,261433.08387200005,251365.2146,True,659671,UEFA Champions League: 2027 Champion
+Will Jesus Christ return before 2027?,Yes,0.0145,0.9855,1.0,0.001,65491331.07886788,605312.12128,False,90178,Will Jesus Christ return before 2027?
+"Will OpenAI’s Astra model be released by September 3, 2026?",September 3,0.815,0.185,1.0,0.01,61896.947523,8503.2793,False,783555,OpenAI’s Astra released by…?
+Will Valentin Vacherot win the 2026 Men's US Open?,Valentin Vacherot,0.0015,0.9985,1.0,0.001,117677.794,86201.60792,True,139236,2026 Men’s US Open Winner (Tennis)
+Will Millwall FC vs. Wrexham AFC end in a draw?,Draw (Millwall FC vs. Wrexham AFC),0.0005,0.9995,1.0,0.001,48223.881647,103647.20233,True,878794,Millwall FC vs. Wrexham AFC
+Strait of Hormuz traffic returns to normal by December 31?,Yes,0.255,0.745,1.0,0.01,10215793.066620996,431469.0217,False,455875,Strait of Hormuz traffic returns to normal by December 31?
+Will WTI Crude Oil (WTI) hit (HIGH) $130 in September?,↑ $130,0.024,0.976,1.0,0.006,56228.105651,38060.92426,False,907966,What will WTI Crude Oil (WTI) hit in September 2026?
+Counter-Strike: Color vs DENDELE CS (BO3) - IEM Beijing: Global Qualifier Playof,Match Winner,0.9995,0.0005,1.0,0.001,46913.378719,145098.4271,False,954118,Counter-Strike: Color vs DENDELE CS (BO3) - IEM Beijing: Global Qualifier Playof
+"Trump renames Strait of Hormuz to ""Strait of Trump"" by December 31?",Yes,0.048,0.952,1.0,0.02,67463.86467300002,59746.19652,False,872308,"Trump renames Strait of Hormuz to ""Strait of Trump"" by December 31?"
+Game Handicap: BLG (-2.5) vs Team WE (+2.5),Game Handicap: BLG (-2.5) vs Team WE (+2.5),0.395,0.605,1.0,0.01,46769.031437,35867.9266,False,936300,LoL: Bilibili Gaming vs Team WE (BO5) - LPL Playoffs
+Will Brandon Nakashima win the 2026 Men's US Open?,Brandon Nakashima,0.0005,0.9995,1.0,0.001,270947.082278,145424.43817,True,139236,2026 Men’s US Open Winner (Tennis)
+Will West Bromwich Albion FC vs. Charlton Athletic FC end in a draw?,Draw (West Bromwich Albion FC vs. Charlton Athletic FC),0.9995,0.0005,1.0,0.001,46699.921281999996,133512.11475,True,878792,West Bromwich Albion FC vs. Charlton Athletic FC
+New York Yankees vs. Los Angeles Angels,Yes,0.595,0.405,1.0,0.01,48007.29265399999,417492.1694,False,920969,New York Yankees vs. Los Angeles Angels
+"Will Bitcoin reach $95,000 in September?","↑ 95,000",0.0595,0.9405,1.0,0.001,64758.22184300001,47620.41529,False,946004,What price will Bitcoin hit in September?
+"US announces end of Iranian blockade by September 30, 2026?",September 30,0.185,0.815,1.0,0.01,2441203.9270180003,162666.9324,False,699735,US announces end of Iranian blockade by...?
+Will Gilad Erdan be the next Prime Minister of Israel?,Gilad Erdan,0.0015,0.9985,1.0,0.001,641421.7842809998,145293.66452,True,81557,Prime Minister of Israel after the next election?
+"Will the price of Bitcoin be above $74,000 on September 3?","74,000",0.983,0.017,1.0,0.002,71978.411802,23805.4376,False,921460,Bitcoin above ___ on September 3?
+Spread: FC Bayern München (-2.5),FC Bayern München (-2.5),0.9995,0.0005,1.0,0.001,45912.91811399998,58244.18141,False,881615,VfL Osnabrück vs. FC Bayern München - More Markets
+Will the US confirm that aliens exist before 2027?,December 31,0.0385,0.9615,1.0,0.001,37907624.684395,811458.35526,False,90177,Will the US confirm that aliens exist by...?
+Burnley FC vs. Middlesbrough FC: O/U 5.5,O/U 5.5,0.0005,0.9995,1.0,0.001,45869.98587700001,104414.9046,False,880193,Burnley FC vs. Middlesbrough FC - More Markets
+1st Half Spread: CF América (-1.5),CF América 1st Half (-1.5),0.185,0.815,1.0,0.01,45540.67138300001,8768.8432,False,926445,CF América vs. CF Monterrey - More Markets
+Will the Bank of Japan announce no change at the September 2026 meeting?,No change,0.016,0.984,1.0,0.008,189374.726867,28731.84776,True,606452,Bank of Japan Decision in September?
+Ball State vs. Ohio State,Yes,0.004,0.996,1.0,0.002,46336.001111000005,37843.59883,False,912906,Ball State vs. Ohio State
+Will Cory Booker win the 2028 Democratic presidential nomination?,Cory Booker,0.0065,0.9935,1.0,0.001,26087022.125598002,1624613.76595,True,30829,Democratic Presidential Nominee 2028
+Spread: AEK (-2.5),AEK (-2.5),0.495,0.505,1.0,0.01,45037.153589999994,51368.3013,False,929439,AEK vs. OFI - More Markets
+2nd Half Spread: Liverpool FC (-1.5),Liverpool FC 2nd Half (-1.5),0.21,0.79,1.0,0.14,44990.781403999994,1516.3444,False,888535,Ipswich Town FC vs. Liverpool FC - More Markets
+Will Pablo Marçal win the 2026 Brazilian presidential election?,Pablo Marçal,0.0015,0.9985,1.0,0.001,3288852.332336001,303251.47331,True,45915,Brazil Presidential Election
+"Will Bitcoin dip to $55,000 by December 31, 2026?","↓ 55,000",0.225,0.775,1.0,0.01,5815478.804959,148060.0872,False,89502,What price will Bitcoin hit in 2026?
+"Will Elon Musk post 180-199 tweets from August 28 to September 4, 2026?",180-199,0.425,0.575,1.0,0.01,101115.87870799997,22967.6114,True,907934,"Elon Musk # tweets August 28 - September 4, 2026?"
+Counter-Strike: 3DMAX vs Walczaki (BO3) - NODWIN Clutch Series Playoffs,Match Winner,0.9995,0.0005,1.0,0.001,45156.491011999984,50053.60327,False,947776,Counter-Strike: 3DMAX vs Walczaki (BO3) - NODWIN Clutch Series Playoffs
+Exact Score: West Bromwich Albion FC 1 - 0 Charlton Athletic FC?,West Bromwich Albion FC 1 - 0 Charlton Athletic FC,0.0005,0.9995,1.0,0.001,43745.72838899999,46071.7851,True,878808,West Bromwich Albion FC vs. Charlton Athletic FC - Exact Score
+West Bromwich Albion FC vs. Charlton Athletic FC: O/U 1.5,O/U 1.5,0.9995,0.0005,1.0,0.001,43731.81444000001,72595.95457,False,880195,West Bromwich Albion FC vs. Charlton Athletic FC - More Markets
+AEK vs. OFI: O/U 1.5,O/U 1.5,0.505,0.495,1.0,0.01,43631.895229000016,29383.4763,False,929439,AEK vs. OFI - More Markets
+Will the Swedish Social Democratic Party (S) win the most seats in the 2026 Swed,Swedish Social Democratic Party (S),0.9825,0.0175,1.0,0.007,196464.27037999997,100907.51703,True,96640,Sweden Parliamentary Election Winner
+US Open WTA: Jessica Bouzas Maneiro vs Elena Rybakina,Yes,0.175,0.825,1.0,0.01,42914.690115000005,27989.9048,False,951687,US Open WTA: Jessica Bouzas Maneiro vs Elena Rybakina
+"UFC Fight Night: Dan Hooker vs. Salahdine Parnasse (Lightweight, Main Card)",Dan Hooker vs. Salahdine Parnasse,0.185,0.815,1.0,0.01,68544.93847200001,46150.5191,False,892086,"UFC Fight Night: Dan Hooker vs. Salahdine Parnasse (Lightweight, Main Card)"
+Will the Democratic Party control the House after the 2026 Midterm elections?,Democratic Party,0.885,0.115,1.0,0.01,5693123.001942001,731921.4473,True,32225,Which party will win the House in 2026?
+Milwaukee Brewers vs. Chicago Cubs: O/U 8.5,O/U 8.5,0.515,0.485,1.0,0.01,42478.042635000005,380596.7429,False,920965,Milwaukee Brewers vs. Chicago Cubs
+Will no Fed rate cuts happen in 2026?,0 (0 bps),0.8895,0.1105,1.0,0.001,7861746.658563,464921.19097,True,51456,How many Fed rate cuts in 2026?
+Will China invade Taiwan by end of 2026?,Yes,0.0375,0.9625,1.0,0.001,40496040.038455926,447585.30815,False,34044,Will China invade Taiwan by end of 2026?
+Will Mojtaba Khamenei be head of state in Iran end of 2026?,Mojtaba Khamenei,0.829,0.171,1.0,0.002,6358488.914356001,91218.27259,True,237598,Iran leader end of 2026?
+"Will Ethereum reach $3,200 in September?","↑ 3,200",0.07,0.93,1.0,0.008,41466.78490499999,22970.6013,False,946005,What price will Ethereum hit in September?
+Will the Bank of Japan announce a 50+ bps increase at the September 2026 meeting,50+ bps increase,0.0095,0.9905,1.0,0.005,122372.52834799998,28598.88987,True,606452,Bank of Japan Decision in September?
+Bab el-Mandeb Strait effectively closed by September 30?,September 30,0.0475,0.9525,1.0,0.005,2434571.482702001,134713.7474,False,276527,Bab el-Mandeb Strait effectively closed by...?
+Will Erika Kirk win the 2028 Republican presidential nomination?,Erika Kirk,0.0015,0.9985,1.0,0.001,18732285.517151996,2094205.16903,True,31875,Republican Presidential Nominee 2028
+"Will Ethereum reach $2,900 in September?","↑ 2,900",0.175,0.825,1.0,0.01,48418.99907,25109.3527,False,946005,What price will Ethereum hit in September?
+"Will Bitcoin dip to $75,000 on September 2?","↓ 75,000",0.016,0.984,1.0,0.008,40069.34158999998,18193.00689,False,951611,What price will Bitcoin hit on September 2?
+Will Crude Oil reach a new all-time high by September 30?,September 30,0.015,0.985,1.0,0.002,1399585.7976550006,104593.98933,False,435099,Crude Oil all time high by...?
+Will Stefanos Tsitsipas win the 2026 Men's US Open?,Stefanos Tsitsipas,0.0045,0.9955,1.0,0.001,138966.84717700002,125687.25784,True,139236,2026 Men’s US Open Winner (Tennis)
+"Will Bitcoin reach $90,000 by December 31, 2026?","↑ 90,000",0.435,0.565,1.0,0.01,1786104.5217220003,95573.0174,False,89502,What price will Bitcoin hit in 2026?
+Will Liverpool win the 2026-27 UEFA Champions League Championship?,Liverpool,0.055,0.945,1.0,0.01,120402.74813900002,318533.259,True,659671,UEFA Champions League: 2027 Champion
+US Open ATP: Rei Sakamoto vs Frances Tiafoe,Yes,0.235,0.765,1.0,0.01,38954.720636000005,199030.5798,False,946002,US Open ATP: Rei Sakamoto vs Frances Tiafoe
+Clarity Act (H.R.3633) signed into law in 2026?,Yes,0.145,0.855,1.0,0.01,11643267.64849201,354510.3867,False,158505,Clarity Act (H.R.3633) signed into law in 2026?
+"Will the price of Bitcoin be above $82,000 on September 3?","82,000",0.005,0.995,1.0,0.002,77155.75846600001,21180.18339,False,921460,Bitcoin above ___ on September 3?
+Will Lille win the 2026-27 UEFA Champions League Championship?,Lille,0.0015,0.9985,1.0,0.001,230880.825833,203955.47663,True,659671,UEFA Champions League: 2027 Champion
+"Will Bitcoin reach $87,500 in September?","↑ 87,500",0.175,0.825,1.0,0.01,61043.73317,36533.7099,False,946004,What price will Bitcoin hit in September?
+Will Trump praise Bryson DeChambeau in August?,Bryson DeChambeau,0.9995,0.0005,1.0,0.001,112415.52476699998,283537.30462,False,777119,Who will Trump publicly praise in August?
+US Open WTA: Iga Swiatek vs Nadia Podoroska,Yes,0.9725,0.0275,1.0,0.001,47899.359496,21398.55204,False,945779,US Open WTA: Iga Swiatek vs Nadia Podoroska
+Millwall FC vs. Wrexham AFC: O/U 1.5,O/U 1.5,0.9995,0.0005,1.0,0.001,36800.219565999985,96811.68567,False,880194,Millwall FC vs. Wrexham AFC - More Markets
+Will VfL Osnabrück vs. FC Bayern München end in a draw?,Draw (VfL Osnabrück vs. FC Bayern München),0.0005,0.9995,1.0,0.001,37364.00637099999,93157.353,True,881426,VfL Osnabrück vs. FC Bayern München
+Will Ulf Kristersson be the next Prime Minister of Sweden?,Ulf Kristersson,0.195,0.805,1.0,0.01,296778.40815200005,98090.1519,True,166435,Next Prime Minister of Sweden
+Will Yariv Levin be the next Prime Minister of Israel?,Yariv Levin,0.0025,0.9975,1.0,0.001,1675293.0877359996,92946.54792,True,81557,Prime Minister of Israel after the next election?
+Will Manchester City win the 2026-27 English Premier League (EPL) Championship?,Manchester City,0.245,0.755,1.0,0.01,1978890.5525070003,436086.4444,True,659518,EPL: 2027 Champion
+Will Benjamin Netanyahu be the next Prime Minister of Israel?,Benjamin Netanyahu,0.295,0.705,1.0,0.01,3517064.2076089988,146502.4113,True,81557,Prime Minister of Israel after the next election?
+1st Half Spread: Toulouse FC (-1.5),Toulouse FC 1st Half (-1.5),0.205,0.795,1.0,0.21,35466.530052,7158.7411,False,884009,Toulouse FC vs. Lille OSC - More Markets
+Will Sarah Knafo win the 2027 French presidential election?,Sarah Knafo,0.0115,0.9885,1.0,0.001,1878727.3119929999,183368.36848,True,79987,Next French Presidential Election
+Will Alexandria Ocasio-Cortez win the 2028 US Presidential Election?,Alexandria Ocasio-Cortez,0.1205,0.8795,1.0,0.001,13578714.718189005,323754.29144,True,31552,Presidential Election Winner 2028
+Will Zizou Bergs win the 2026 Men's US Open?,Zizou Bergs,0.0005,0.9995,1.0,0.001,44000.0,82382.94497,True,139236,2026 Men’s US Open Winner (Tennis)
+Will AfD win an absolute majority of seats in Sachsen-Anhalt?,Yes,0.27,0.73,1.0,0.02,502355.96744700003,77379.4193,False,478687,Will AfD win an absolute majority of seats in Sachsen-Anhalt?
+Caribbean Premier League: Trinbago Knight Riders vs Antigua And Barbuda Falcons,Yes,0.575,0.425,1.0,0.01,34642.09193599999,15319.6072,False,947212,Caribbean Premier League: Trinbago Knight Riders vs Antigua And Barbuda Falcons
+"Will Elon Musk post 200-219 tweets from August 28 to September 4, 2026?",200-219,0.305,0.695,1.0,0.01,73123.72850000001,21914.615,True,907934,"Elon Musk # tweets August 28 - September 4, 2026?"
+"US announces end of Iranian blockade by October 31, 2026?",October 31,0.37,0.63,1.0,0.02,878872.6834689996,114478.5074,False,699735,US announces end of Iranian blockade by...?
+Will Grand Theft Auto VI Extended Look get between 24 and 26 million views on we,24-26M,0.0475,0.9525,1.0,0.005,63051.72862099999,6776.49123,True,928113,# of views of Grand Theft Auto VI Extended Look on week 1?
+"Will the price of Bitcoin be above $70,000 on September 3?","70,000",0.9995,0.0005,1.0,0.001,93997.02087699999,36384.63254,False,921460,Bitcoin above ___ on September 3?
+Will Mark Kelly win the 2028 US Presidential Election?,Mark Kelly,0.0195,0.9805,1.0,0.001,666275.3585020001,214320.9025,True,31552,Presidential Election Winner 2028
+Will Fenerbahçe win the 2026-27 UEFA Champions League Championship?,Fenerbahçe,0.0035,0.9965,1.0,0.001,213639.964665,219288.36339,True,659671,UEFA Champions League: 2027 Champion
+LoL: NightBirds vs Bohemian Guardians (BO3) - Hitpoint Masters Regular Season,Match Winner,0.496,0.504,1.0,0.008,35082.43113999999,8983.73963,False,948490,LoL: NightBirds vs Bohemian Guardians (BO3) - Hitpoint Masters Regular Season
+Will Lorenzo Musetti win the 2026 Men's US Open?,Lorenzo Musetti,0.0155,0.9845,1.0,0.005,578691.7589250002,44481.14001,True,139236,2026 Men’s US Open Winner (Tennis)
+Spread: AEK (-1.5),AEK (-1.5),0.495,0.505,1.0,0.01,33407.112947,29870.3968,False,929439,AEK vs. OFI - More Markets
+Will Francisco Cerundolo win the 2026 Men's US Open?,Francisco Cerundolo,0.0015,0.9985,1.0,0.001,132494.22,119216.4165,True,139236,2026 Men’s US Open Winner (Tennis)
+West Bromwich Albion FC vs. Charlton Athletic FC: O/U 2.5,O/U 2.5,0.0005,0.9995,1.0,0.001,33400.107802,81073.42734,False,880195,West Bromwich Albion FC vs. Charlton Athletic FC - More Markets
+"Will Ethereum reach $4,000 in September?","↑ 4,000",0.012,0.988,1.0,0.002,55895.21325500001,52296.44396,False,946005,What price will Ethereum hit in September?
+US Open WTA: Lanlana Tararudee vs Linda Noskova,Yes,0.175,0.825,1.0,0.01,33227.651129,189429.8934,False,944509,US Open WTA: Lanlana Tararudee vs Linda Noskova
+Will Cardiff City FC win on 2026-09-02?,Cardiff City FC,0.0005,0.9995,1.0,0.001,33007.607244000006,81113.43935,True,878789,Queens Park Rangers FC vs. Cardiff City FC
+Will Burnley FC vs. Middlesbrough FC end in a draw?,Draw (Burnley FC vs. Middlesbrough FC),0.9995,0.0005,1.0,0.001,32894.50891400001,145999.7222,True,878797,Burnley FC vs. Middlesbrough FC
+Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?,Luiz Inácio Lula da Silva,0.555,0.445,1.0,0.01,9588067.990828998,312875.5895,True,45915,Brazil Presidential Election
+Trump out as President before 2027?,Yes,0.055,0.945,1.0,0.01,11347717.003599,410155.694,False,73969,Trump out as President before 2027?
+"Lacy and Marlon beat gaming challenge by September 3, 2026, 11:59 PM ET?",September 3 (11:59 PM),0.0445,0.9555,1.0,0.023,32464.028140000002,4795.75606,False,950123,Lacy and Marlon beat gaming challenge by...?
+"Will Elon Musk post 220-239 tweets from August 28 to September 4, 2026?",220-239,0.075,0.925,1.0,0.01,69199.575957,27585.5807,True,907934,"Elon Musk # tweets August 28 - September 4, 2026?"
+"Will Bitcoin reach $90,000 in September?","↑ 90,000",0.135,0.865,1.0,0.01,75259.95939100001,42738.1889,False,946004,What price will Bitcoin hit in September?
+"Will Elon Musk post 320-339 tweets from August 28 to September 4, 2026?",320-339,0.001,0.999,1.0,0.002,67962.66973200001,30824.63666,True,907934,"Elon Musk # tweets August 28 - September 4, 2026?"
+Will Learner Tien win the 2026 Men's US Open?,Learner Tien,0.0075,0.9925,1.0,0.001,226542.29104500002,57687.79136,True,139236,2026 Men’s US Open Winner (Tennis)
+Will Richard Grenell be the leader of Venezuela end of 2026?,Richard Grenell,0.0005,0.9995,1.0,0.001,32790551.908844996,99919.82024,True,143443,Venezuela leader end of 2026?
+1st Half Spread: Deportivo Toluca FC (-1.5),Deportivo Toluca FC 1st Half (-1.5),0.17,0.83,1.0,0.04,31611.209296999998,10759.6536,False,926444,Deportivo Toluca FC vs. Club León FC - More Markets
+Will WTI Crude Oil (WTI) hit (HIGH) $120 in September?,↑ $120,0.0275,0.9725,1.0,0.007,74332.106396,39499.69026,False,907966,What will WTI Crude Oil (WTI) hit in September 2026?
+"Will the price of Bitcoin be above $84,000 on September 3?","84,000",0.0005,0.9995,1.0,0.001,48877.606268,39583.98465,False,921460,Bitcoin above ___ on September 3?
+Fed rate hike in 2026?,Yes,0.705,0.295,1.0,0.01,8441777.480917001,175678.4101,False,101936,Fed rate hike in 2026?
+"Will Ethereum reach $3,300 in September?","↑ 3,300",0.055,0.945,1.0,0.014,36337.827001,28186.61904,False,946005,What price will Ethereum hit in September?
+"US-Iran Final Nuclear Deal by September 30, 2026?",September 30,0.007,0.993,1.0,0.002,1478516.1135230004,101488.08542,False,620025,US-Iran Final Nuclear Deal by…?
+Strait of Hormuz traffic returns to normal by August 31?,August 31,0.0005,0.9995,1.0,0.001,17901616.524730034,1127054.96456,False,660108,Strait of Hormuz traffic returns to normal by...?
+"Putin out as President of Russia by December 31, 2026?","December 31, 2026",0.065,0.935,1.0,0.01,19935011.292829014,728823.4011,False,31195,Putin out as President of Russia by...?
+"Will the price of Bitcoin be above $78,000 on September 3?","78,000",0.235,0.765,1.0,0.01,51102.528558999984,19551.6539,False,921460,Bitcoin above ___ on September 3?
+"Lacy and Marlon beat gaming challenge by September 4, 2026, 11:59 PM ET?",September 4 (11:59 PM),0.245,0.755,1.0,0.01,30638.422511,3617.6163,False,950123,Lacy and Marlon beat gaming challenge by...?
+"Will OpenAI’s Astra model be released by September 2, 2026?",September 2,0.009,0.991,1.0,0.012,34371.810325000006,7098.73042,False,783555,OpenAI’s Astra released by…?
+Will Union Saint-Gilloise win on 2026-09-02?,Union Saint-Gilloise,0.9995,0.0005,1.0,0.001,30175.004772000004,43539.67201,True,937595,St. Truidense VV vs. Union Saint-Gilloise
+Iran leadership change by December 31?,December 31,0.155,0.845,1.0,0.01,4356676.242514999,241894.0492,False,255195,Iran leadership change by...?
+Will the Democratic Party control the Senate after the 2026 Midterm elections?,Democratic Party,0.515,0.485,1.0,0.01,2428415.9025079994,207993.4557,True,32224,Which party will win the Senate in 2026?
+Israel x Iran ceasefire continues through December 31?,December 31,0.625,0.375,1.0,0.01,305398.847052,79659.5453,False,711714,Israel x Iran ceasefire continues through...?
+Philadelphia Phillies vs. Arizona Diamondbacks: O/U 8.5,O/U 8.5,0.0005,0.9995,1.0,0.001,29193.78073300001,70033.0095,False,920960,Philadelphia Phillies vs. Arizona Diamondbacks
+"Will Bitcoin dip to $74,000 on September 2?","↓ 74,000",0.006,0.994,1.0,0.008,29186.801123999998,9772.61286,False,951611,What price will Bitcoin hit on September 2?
+Will Tom Brady win the 2028 Republican presidential nomination?,Tom Brady,0.0015,0.9985,1.0,0.001,32950571.573229007,2137458.63662,True,31875,Republican Presidential Nominee 2028
+Counter-Strike: BORRACHEIROS vs Mansão Maromba (BO3) - CCT South America Series ,Match Winner,0.52,0.48,1.0,0.02,28975.31618100001,11055.5674,False,952032,Counter-Strike: BORRACHEIROS vs Mansão Maromba (BO3) - CCT South America Series 
+"Will Elon Musk post 260-279 tweets from August 28 to September 4, 2026?",260-279,0.0095,0.9905,1.0,0.001,82395.22396100001,24844.88725,True,907934,"Elon Musk # tweets August 28 - September 4, 2026?"
+"Will Ethereum reach $2,800 in September?","↑ 2,800",0.22,0.78,1.0,0.02,36592.420663000004,25420.2358,False,946005,What price will Ethereum hit in September?
+"Will Ethereum dip to $2,000 by December 31, 2026?","↓ 2,000",0.43,0.57,1.0,0.04,60873.735783000004,21637.397,False,89519,What price will Ethereum hit in 2026?
+Spread: CR Flamengo (-1.5),CR Flamengo (-1.5),0.605,0.395,1.0,0.01,29860.102931999994,96088.6104,False,895336,CR Flamengo vs. Mirassol FC - More Markets
+Will Liverpool FC win on 2026-09-04?,Liverpool FC,0.635,0.365,1.0,0.01,49337.567586000005,397201.4755,True,888268,Ipswich Town FC vs. Liverpool FC
+Will the Communist Party of the Russian Federation (KPRF) gain the most seats in,Communist Party of the Russian Federation (KPRF),0.0125,0.9875,1.0,0.001,1674510.6917439997,233586.01496,True,149589,Which party will gain most seats in Russian Parliamentary Election?
+St. Truidense VV vs. Union Saint-Gilloise: O/U 2.5,O/U 2.5,0.9995,0.0005,1.0,0.001,28574.527009,40475.95282,False,938051,St. Truidense VV vs. Union Saint-Gilloise - More Markets
+Will WTI Crude Oil (WTI) hit (HIGH) $95 in September?,↑ $95,0.66,0.34,1.0,0.02,96272.06155399999,14103.386,False,907966,What will WTI Crude Oil (WTI) hit in September 2026?
+"Will Bitcoin dip to $65,000 in September?","↓ 65,000",0.13,0.87,1.0,0.02,80716.539303,34957.4184,False,946004,What price will Bitcoin hit in September?
+Counter-Strike: Team Falcons vs G2 (BO3) - BLAST Open Porto Playoffs,Match Winner,0.595,0.405,1.0,0.01,128053.08103299998,110158.8134,False,944152,Counter-Strike: Team Falcons vs G2 (BO3) - BLAST Open Porto Playoffs
+Will Ben Shelton win the 2026 Men's US Open?,Ben Shelton,0.091,0.909,1.0,0.006,571519.383763,41023.30419,True,139236,2026 Men’s US Open Winner (Tennis)
+Will Marco Rubio win the 2028 US Presidential Election?,Marco Rubio,0.1025,0.8975,1.0,0.001,12222055.019984998,298585.61481,True,31552,Presidential Election Winner 2028
+Detroit Tigers vs. Minnesota Twins: O/U 8.5,O/U 8.5,0.515,0.485,1.0,0.01,27725.973034,283005.6516,False,920967,Detroit Tigers vs. Minnesota Twins
+"Will the price of Ethereum be above $2,200 on September 3?","2,200",0.9925,0.0075,1.0,0.001,35091.195882,22397.73664,False,921454,Ethereum above ___ on September 3?
+Will Tommy Paul win the 2026 Men's US Open?,Tommy Paul,0.009,0.991,1.0,0.002,282078.58296699997,68854.59838,True,139236,2026 Men’s US Open Winner (Tennis)
+"Will Bitcoin reach $82,500 in September?","↑ 82,500",0.465,0.535,1.0,0.01,63501.063702,26061.7301,False,946004,What price will Bitcoin hit in September?
+"Will Iran target an Arab country by September 11, 2026?",September 11,0.91,0.09,1.0,0.04,27086.709158,15671.9145,False,952867,Will Iran target an Arab country by...?
+Burnley FC vs. Middlesbrough FC: Both Teams to Score,Both Teams to Score,0.9995,0.0005,1.0,0.001,26768.58061,77385.38208,False,880193,Burnley FC vs. Middlesbrough FC - More Markets
+"Will Iran target an Arab country by September 11, 2026?",September 11,0.91,0.09,1.0,0.04,27086.709158,17962.9049,False,952867,Will Iran target an Arab country by...?
+Burnley FC vs. Middlesbrough FC: Both Teams to Score,Both Teams to Score,0.9995,0.0005,1.0,0.001,26768.58061,72560.95208,False,880193,Burnley FC vs. Middlesbrough FC - More Markets
+Will the Iranian regime fall by September 30?,Yes,0.0095,0.9905,1.0,0.001,1841463.6442010005,294597.22677,False,649418,Will the Iranian regime fall by September 30?
+US x Iran Effective Ceasefire by September 4?,September 4,0.335,0.665,1.0,0.01,26394.919732000013,43117.6719,False,950983,US x Iran Effective Ceasefire begins by...? (2 week pause)
+WTI Crude Oil (WTI) Up or Down on September 2?,Yes,0.0005,0.9995,1.0,0.001,26149.934558999994,3064.97182,False,947443,WTI Crude Oil (WTI) Up or Down on September 2?
+Will Yossi Cohen be the next Prime Minister of Israel?,Yossi Cohen,0.0025,0.9975,1.0,0.001,2225597.4122340004,169300.77728,True,81557,Prime Minister of Israel after the next election?
+Will WTI Crude Oil (WTI) hit (HIGH) $100 in September?,↑ $100,0.335,0.665,1.0,0.01,114084.66405499999,17516.2785,False,907966,What will WTI Crude Oil (WTI) hit in September 2026?
+LoL: BNK FEARX vs Dplus KIA (BO5) - LCK Playoffs,Match Winner,0.255,0.745,1.0,0.01,59172.60081499998,194735.5299,False,936206,LoL: BNK FEARX vs Dplus KIA (BO5) - LCK Playoffs
+"NATO x Russia military clash by December 31, 2026?",December 31,0.245,0.755,1.0,0.01,1725459.1653840002,44203.7235,False,48930,NATO x Russia military clash by...?
+Set Handicap: Shapovalov (-1.5) vs Assche (+1.5),US Open ATP: Denis Shapovalov vs Luca Van Assche Set Handicap +/-1.5,0.42,0.58,1.0,0.54,25824.806195999998,34.6178,False,940024,US Open ATP: Denis Shapovalov vs Luca Van Assche
+Will the highest temperature in Kuala Lumpur be 32°C on September 3?,32°C,0.027,0.973,1.0,0.006,37083.37335200001,3449.02361,True,945968,Highest temperature in Kuala Lumpur on September 3?
+Celtic FC leading at halftime?,Celtic FC,0.9995,0.0005,1.0,0.001,29092.690416999998,37548.25734,True,879768,Celtic FC vs. Aberdeen FC - Halftime Result
+Grasshopper Club Zurich vs. FC St. Gallen 1879: O/U 2.5,O/U 2.5,0.0005,0.9995,1.0,0.001,25573.997792,36045.89912,False,937224,Grasshopper Club Zurich vs. FC St. Gallen 1879 - More Markets
+Will Arsenal win the 2026-27 UEFA Champions League Championship?,Arsenal,0.155,0.845,1.0,0.01,411298.6898110001,243464.2172,True,659671,UEFA Champions League: 2027 Champion
+Will Grand Theft Auto VI Extended Look get between 26 and 28 million views on we,26-28M,0.008,0.992,1.0,0.002,35141.793207999996,7323.09479,True,928113,# of views of Grand Theft Auto VI Extended Look on week 1?
+Seattle Mariners vs. Boston Red Sox: O/U 7.5,O/U 7.5,0.64,0.36,1.0,0.02,25385.837998,19326.1346,False,920961,Seattle Mariners vs. Boston Red Sox
+LoL: Estral Esports vs Vivo Keyd Stars Academy - Game 2 Winner,Game 2 Winner,0.9995,0.0005,1.0,0.001,25691.274519999995,142907.30539,False,918100,LoL: Estral Esports vs Vivo Keyd Stars Academy (BO5) - Circuito Desafiante Playo
+Will the San Francisco 49ers win the 2027 NFL league championship?,San Francisco 49ers,0.0445,0.9555,1.0,0.001,1111596.033239,156785.82177,True,202857,Pro Football: 2027 Champion
+Will Luiz Inácio Lula da Silva finish in second place in the first round of the ,Luiz Inácio Lula da Silva,0.0745,0.9255,1.0,0.007,432076.6076040001,79665.27893,True,204972,Brazil Presidential Election First Round: 2nd Place
+FC Thun vs. Lausanne-Sport: O/U 1.5,O/U 1.5,0.0005,0.9995,1.0,0.001,25181.931607000002,50677.5198,False,937225,FC Thun vs. Lausanne-Sport - More Markets
+Will CDU win the most seats in the 2026 Berlin state elections?,CDU,0.435,0.565,1.0,0.01,232017.21049099995,66469.9353,True,95248,Berlin State Election Winner
+Millwall FC vs. Wrexham AFC: O/U 3.5,O/U 3.5,0.0005,0.9995,1.0,0.001,25067.686929,69555.43232,False,880194,Millwall FC vs. Wrexham AFC - More Markets
+2nd Half Spread: VfB Stuttgart (-1.5),VfB Stuttgart 2nd Half (-1.5),0.27,0.73,1.0,0.18,24896.130472000004,6570.4193,False,888529,VfB Stuttgart vs. 1. FC Köln - More Markets
+"Will Elon Musk post 80-99 tweets from September 1 to September 8, 2026?",80-99,0.0015,0.9985,1.0,0.001,47742.518461,29701.4297,True,928969,"Elon Musk # tweets September 1 - September 8, 2026?"
+VfL Osnabrück vs. FC Bayern München: FC Bayern München O/U 2.5,FC Bayern München O/U 2.5,0.9995,0.0005,1.0,0.001,24588.887598999998,66309.5202,False,881615,VfL Osnabrück vs. FC Bayern München - More Markets
+Variational FDV above $800M one day after launch?,$800M,0.585,0.415,1.0,0.01,344778.91860000003,33063.9988,False,103469,Variational FDV above ___ one day after launch?
+Game Handicap: DK (-1.5) vs BNK FEARX (+1.5),Game Handicap: DK (-1.5) vs BNK FEARX (+1.5),0.585,0.415,1.0,0.01,58928.404598,66948.2856,False,936206,LoL: BNK FEARX vs Dplus KIA (BO5) - LCK Playoffs
+"Will Bitcoin dip to $70,000 August 31-September 6?","↓ 70,000",0.0255,0.9745,1.0,0.003,34763.66586999999,20063.32629,False,939676,What price will Bitcoin hit August 31-September 6?
+Will Elena Rybakina win the 2026 Women’s US Open?,Elena Rybakina,0.055,0.945,1.0,0.002,247096.956597,42932.3458,True,139255,2026 Women’s US Open Winner (Tennis)
+Will Kimi Antonelli be the 2026 F1 Drivers' Champion?,Kimi Antonelli,0.7245,0.2755,1.0,0.001,4095674.3832720006,423428.87917,True,100371,F1 Drivers' Champion
+Will Roy Cooper win the 2028 Democratic presidential nomination?,Roy Cooper,0.0035,0.9965,1.0,0.001,31452953.606567003,1776401.71412,True,30829,Democratic Presidential Nominee 2028
+New York Yankees vs. Los Angeles Angels: O/U 6.5,O/U 6.5,0.515,0.485,1.0,0.01,24080.193687,201576.6668,False,920969,New York Yankees vs. Los Angeles Angels
+"Will Bitcoin reach $78,000 on September 2?","↑ 78,000",0.125,0.875,1.0,0.05,23975.000936000008,2014.9464,False,951611,What price will Bitcoin hit on September 2?
+"Gemini 4.0 released by September 30, 2026?",September 30,0.305,0.695,1.0,0.01,197719.07967900005,20597.0769,False,103527,Gemini 4.0 released by...?
+Will Grasshopper Club Zurich win on 2026-09-02?,Grasshopper Club Zurich,0.9995,0.0005,1.0,0.001,23684.232902000007,41328.27822,True,937119,Grasshopper Club Zurich vs. FC St. Gallen 1879
+Will Gavin Newsom win the 2028 Democratic presidential nomination?,Gavin Newsom,0.1415,0.8585,1.0,0.001,27054906.897865992,323279.55065,True,30829,Democratic Presidential Nominee 2028
+US Open WTA: Xinyu Wang vs Anna Kalinskaya,Yes,0.52,0.48,1.0,0.02,23540.929759,109451.7376,False,944504,US Open WTA: Xinyu Wang vs Anna Kalinskaya
+"Will the price of Bitcoin be above $88,000 on September 4?","88,000",0.0005,0.9995,1.0,0.001,34733.917030000004,32056.73984,False,926334,Bitcoin above ___ on September 4?
+Will OpenAI have the best AI model at the end of September 2026?,OpenAI,0.07,0.93,1.0,0.002,93029.572339,58188.17773,True,727186,Which company has the best AI model end of September?
+Map Handicap: CHAMA (-1.5) vs Mansão Maromba (+1.5),Map Handicap: CHAMA (-1.5) vs Mansão Maromba (+1.5),0.495,0.505,1.0,0.07,23331.274528000005,5119.6114,False,952032,Counter-Strike: BORRACHEIROS vs Mansão Maromba (BO3) - CCT South America Series 
+"Will the price of Ethereum be above $2,100 on September 3?","2,100",0.997,0.003,1.0,0.004,23389.214545000006,24892.46578,False,921454,Ethereum above ___ on September 3?
+Will Geraldo Alckmin win the 2026 Brazilian presidential election?,Geraldo Alckmin,0.0005,0.9995,1.0,0.001,6011716.679347999,163593.95774,True,45915,Brazil Presidential Election
+Will Harry Kane win the 2026 Ballon d'Or?,Harry Kane,0.6355,0.3645,1.0,0.001,3915619.3029159973,187234.29274,True,48361,Ballon d'Or Winner 2026
+Will there be a run scored in the first inning?: Miami Marlins vs. Kansas City R,NRFI,0.475,0.525,1.0,0.01,22790.243722000003,33963.438,False,920966,Miami Marlins vs. Kansas City Royals
+Bab el-Mandeb Strait effectively closed by September 15?,September 15,0.0095,0.9905,1.0,0.005,280864.787206,65918.06165,False,276527,Bab el-Mandeb Strait effectively closed by...?
+Spread: Philadelphia Phillies (-1.5),Spread -1.5,0.0005,0.9995,1.0,0.001,22380.344568,77665.65096,False,920960,Philadelphia Phillies vs. Arizona Diamondbacks
+LoL: Bilibili Gaming vs Team WE (BO5) - LPL Playoffs,Match Winner,0.835,0.165,1.0,0.01,38560.943802999995,100557.6905,False,936300,LoL: Bilibili Gaming vs Team WE (BO5) - LPL Playoffs
+Will the Liberal Democratic Party of Russia (LDPR) gain the most seats in the ne,Liberal Democratic Party of Russia (LDPR),0.048,0.952,1.0,0.002,3558397.0551719996,170327.57351,True,149589,Which party will gain most seats in Russian Parliamentary Election?
+"Will Elon Musk post 240-259 tweets from August 28 to September 4, 2026?",240-259,0.0265,0.9735,1.0,0.001,69030.24152400001,24733.13754,True,907934,"Elon Musk # tweets August 28 - September 4, 2026?"
+Will the highest temperature in Hong Kong be 32°C on September 2?,32°C,0.0005,0.9995,1.0,0.001,25456.88656000001,19798.07886,True,939963,Highest temperature in Hong Kong on September 2?
+Will Taylor Fritz win the 2026 Men's US Open?,Taylor Fritz,0.0935,0.9065,1.0,0.011,549008.8881779999,62406.01421,True,139236,2026 Men’s US Open Winner (Tennis)
+Queens Park Rangers FC vs. Cardiff City FC: O/U 1.5,O/U 1.5,0.9995,0.0005,1.0,0.001,22296.460010999996,83106.2358,False,880196,Queens Park Rangers FC vs. Cardiff City FC - More Markets
+FC Thun vs. Lausanne-Sport: O/U 3.5,O/U 3.5,0.0005,0.9995,1.0,0.001,22032.37683,45023.79999,False,937225,FC Thun vs. Lausanne-Sport - More Markets
+"Will the price of Bitcoin be above $70,000 on September 6?","70,000",0.9795,0.0205,1.0,0.009,22044.009966,10259.94469,False,936872,Bitcoin above ___ on September 6?
+Will Mardin 1969 Spor win on 2026-09-02?,Mardin 1969 Spor,0.0005,0.9995,1.0,0.001,21961.799935,45101.64843,True,946532,Sivasspor vs. Mardin 1969 Spor
+"Will Elon Musk post 280-299 tweets from August 28 to September 4, 2026?",280-299,0.0045,0.9955,1.0,0.001,69729.807994,20558.70713,True,907934,"Elon Musk # tweets August 28 - September 4, 2026?"
+Ethereum Up or Down on September 3?,Yes,0.535,0.465,1.0,0.01,21800.524989999998,21306.2912,False,948247,Ethereum Up or Down on September 3?
+2nd Half Spread: Paris Saint-Germain FC (-1.5),Paris Saint-Germain FC 2nd Half (-1.5),0.24,0.76,1.0,0.18,21660.422608,6286.183,False,888533,Paris Saint-Germain FC vs. AS Monaco FC - More Markets
+Lindsay Clancy convicted of murder?,Yes,0.155,0.845,1.0,0.01,169792.12681699992,30640.3068,False,872462,Lindsay Clancy convicted of murder?
+Will Chelsea Clinton win the 2028 Democratic presidential nomination?,Chelsea Clinton,0.0015,0.9985,1.0,0.001,50303694.332273,800963.19421,True,30829,Democratic Presidential Nominee 2028
+Will Alibaba have the best AI model at the end of September 2026?,Alibaba,0.003,0.997,1.0,0.002,91447.94127500002,44690.94192,True,727186,Which company has the best AI model end of September?
+FC Luzern vs. FC Vaduz: O/U 2.5,O/U 2.5,0.9995,0.0005,1.0,0.001,21103.149452000005,33583.86376,False,941840,FC Luzern vs. FC Vaduz - More Markets
+Celtic FC vs. Aberdeen FC: O/U 3.5,O/U 3.5,0.0005,0.9995,1.0,0.001,22866.53926200001,93954.93962,False,882974,Celtic FC vs. Aberdeen FC - More Markets
+LoL: Estral Esports vs Vivo Keyd Stars Academy - Game 1 Winner,Game 1 Winner,0.9995,0.0005,1.0,0.001,21132.301199000005,145565.49683,False,918100,LoL: Estral Esports vs Vivo Keyd Stars Academy (BO5) - Circuito Desafiante Playo
+Will Rodri win the 2026 Ballon d'Or?,Rodri,0.055,0.945,1.0,0.01,1371900.1307290005,162954.6352,True,48361,Ballon d'Or Winner 2026
+Will the Bank of Japan announce a 25 bps increase at the September 2026 meeting?,25 bps increase,0.9795,0.0205,1.0,0.007,160064.79534299998,12491.44835,True,606452,Bank of Japan Decision in September?
+"Will Bitcoin dip to $62,500 in September?","↓ 62,500",0.0755,0.9245,1.0,0.003,42566.712615,32249.74118,False,946004,What price will Bitcoin hit in September?
+Will FC Salzburg win on 2026-09-02?,FC Salzburg,0.9995,0.0005,1.0,0.001,21057.450482000004,40374.75833,True,922910,FC Salzburg vs. SK Rapid
+Will FC St. Gallen 1879 win on 2026-09-02?,FC St. Gallen 1879,0.0005,0.9995,1.0,0.001,21252.565708000002,37990.24424,True,937119,Grasshopper Club Zurich vs. FC St. Gallen 1879
+"US x Iran diplomatic meeting by September 30, 2026?","September 30, 2026",0.1,0.9,1.0,0.02,824705.17015,173945.8261,False,624218,Next round of US-Iran peace talks by...?
+Will Hamas agree to disarm by December 31?,"December 31, 2026",0.24,0.76,1.0,0.02,1584956.9421659994,45079.7639,False,34889,Will Hamas agree to disarm by...?
+"Will Elon Musk post 300-319 tweets from August 28 to September 4, 2026?",300-319,0.0025,0.9975,1.0,0.001,71972.170507,24299.41753,True,907934,"Elon Musk # tweets August 28 - September 4, 2026?"
+Will SpaceXAI have the best AI model at the end of September 2026?,SpaceXAI,0.0055,0.9945,1.0,0.005,84867.31186900003,35674.67739,True,727186,Which company has the best AI model end of September?
+Will Google have the best AI model at the end of September 2026?,Google,0.0235,0.9765,1.0,0.001,97231.40868899997,22861.9166,True,727186,Which company has the best AI model end of September?
+Kanye West performs in Russia by October 31?,Yes,0.285,0.715,1.0,0.01,272612.8329400001,11710.7578,False,875294,Kanye West performs in Russia by October 31?
+"Will Bitcoin dip to $74,000 August 31-September 6?","↓ 74,000",0.175,0.825,1.0,0.01,67804.15376899998,23412.1862,False,939676,What price will Bitcoin hit August 31-September 6?
+"Will Bitcoin reach $120,000 by December 31, 2026?","↑ 120,000",0.075,0.925,1.0,0.01,1633543.0754299995,90598.3429,False,89502,What price will Bitcoin hit in 2026?
+Will Mirassol FC win on 2026-09-02?,Mirassol FC,0.045,0.955,1.0,0.01,31767.175682,239907.8222,True,891202,CR Flamengo vs. Mirassol FC
+Will Toronto Raptors win the 2027 NBA Finals?,Toronto Raptors,0.0305,0.9695,1.0,0.001,463965.3677829999,527401.22667,True,478277,NBA: 2027 Champion
+Will Cleveland Cavaliers win the 2027 NBA Finals?,Cleveland Cavaliers,0.0195,0.9805,1.0,0.001,801514.1633639998,272183.72045,True,478277,NBA: 2027 Champion
+Will Ro Khanna win the 2028 Democratic presidential nomination?,Ro Khanna,0.0205,0.9795,1.0,0.001,11251814.886173002,283803.60493,True,30829,Democratic Presidential Nominee 2028
+Milwaukee Brewers vs. Chicago Cubs: O/U 7.5,O/U 7.5,0.595,0.405,1.0,0.01,19935.189172,167296.5192,False,920965,Milwaukee Brewers vs. Chicago Cubs
+Will J.D. Vance win the 2028 Republican presidential nomination?,J.D. Vance,0.5305,0.4695,1.0,0.001,15502500.703667,352228.77453,True,31875,Republican Presidential Nominee 2028
+"Will Bitcoin dip to $55,000 in September?","↓ 55,000",0.019,0.981,1.0,0.002,109825.58582700003,41855.53042,False,946004,What price will Bitcoin hit in September?
+Will Rodina gain the most seats in the next Russian parliamentary election?,Rodina,0.0015,0.9985,1.0,0.001,2853712.1226439998,240479.22105,True,149589,Which party will gain most seats in Russian Parliamentary Election?
+Strait of Hormuz traffic returns to normal by October 31?,Yes,0.095,0.905,1.0,0.01,347374.826373,213728.3041,False,830253,Strait of Hormuz traffic returns to normal by October 31?
+"Will the price of Bitcoin be above $86,000 on September 4?","86,000",0.0005,0.9995,1.0,0.001,27038.968886000002,15638.52237,False,926334,Bitcoin above ___ on September 4?
+Will Grand Theft Auto VI Extended Look get between 28 and 30 million views on we,28-30M,0.004,0.996,1.0,0.006,40236.261571,6281.17829,True,928113,# of views of Grand Theft Auto VI Extended Look on week 1?
+Will Joe Kent win the 2028 Republican presidential nomination?,Joe Kent,0.0025,0.9975,1.0,0.001,8747511.965540001,1645304.89374,True,31875,Republican Presidential Nominee 2028
+Will Max Verstappen be the 2026 F1 Drivers' Champion?,Max Verstappen,0.0055,0.9945,1.0,0.001,6032994.242939,178140.2281,True,100371,F1 Drivers' Champion
+Will Bodø/Glimt win the 2026-27 UEFA Champions League Championship?,Bodø/Glimt,0.003,0.997,1.0,0.002,226782.934713,102809.15466,True,659671,UEFA Champions League: 2027 Champion
+Will the highest temperature in Buenos Aires be 23°C on September 2?,23°C,0.0005,0.9995,1.0,0.001,22629.176267,3428.16159,True,941650,Highest temperature in Buenos Aires on September 2?
+"Will the price of Ethereum be above $2,300 on September 4?","2,300",0.9,0.1,1.0,0.02,26936.742225999995,21871.9516,False,926331,Ethereum above ___ on September 4?
+Will the Republicans win the Wisconsin governor race in 2026?,Tom Tiffany (R),0.185,0.815,1.0,0.01,262826.820464,115938.0438,True,57226,Wisconsin Governor Election Winner
+"Will OpenAI not IPO by December 31, 2026?","No IPO by December 31, 2026",0.93,0.07,1.0,0.02,531746.6457880001,39111.1269,True,48292,OpenAI IPO Closing Market Cap
+Will Olivier Faure win the 2027 French presidential election?,Olivier Faure,0.0015,0.9985,1.0,0.001,5496879.364115001,207650.53429,True,79987,Next French Presidential Election
+Will CR Flamengo vs. Mirassol FC end in a draw?,Draw (CR Flamengo vs. Mirassol FC),0.125,0.875,1.0,0.01,19885.913072,199581.4933,True,891202,CR Flamengo vs. Mirassol FC
+"Will the price of Bitcoin be above $72,000 on September 5?","72,000",0.9825,0.0175,1.0,0.015,22261.557280999998,16837.52676,False,931226,Bitcoin above ___ on September 5?
+Will Ignacio Buse win the 2026 Men's US Open?,Ignacio Buse,0.0005,0.9995,1.0,0.001,59750.0,76181.47515,True,139236,2026 Men’s US Open Winner (Tennis)
+Will Grüne win the most seats in the 2026 Berlin state elections?,Grüne,0.0405,0.9595,1.0,0.001,175087.27385900004,67317.58835,True,95248,Berlin State Election Winner
