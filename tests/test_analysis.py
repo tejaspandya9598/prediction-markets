@@ -37,3 +37,39 @@ def test_event_consistency_flags_arbitrage():
     arb = event_consistency(to_frame(MARKETS))
     assert len(arb) == 1
     assert abs(arb.iloc[0]["yes_sum"] - 1.1) < 1e-9   # 0.5 + 0.4 + 0.2
+
+
+def test_empty_input_keeps_the_schema():
+    """to_frame([]) used to return a column-less frame and every caller hit KeyError."""
+    df = to_frame([])
+    assert df.empty and "neg_risk" in df.columns
+    assert summary(df)["markets"] == 0
+    assert event_consistency(df).empty
+
+
+def test_malformed_prices_are_skipped_not_fatal():
+    bad = [{"outcomePrices": "not json", "events": []},
+           {"outcomePrices": '["abc","def"]', "events": []},
+           {"outcomePrices": '["0.6","0.4"]', "events": [{"id": "E9", "title": "ok"}]}]
+    assert len(to_frame(bad)) == 1
+
+
+def test_arbitrage_is_netted_against_the_quoted_spread():
+    """A dislocation smaller than the cost of crossing three books is not an arb."""
+    tight = event_consistency(to_frame(MARKETS)).iloc[0]
+    assert tight["tradeable"] and tight["short_edge"] > 0
+
+    wide = [dict(m, spread=0.10) for m in MARKETS]
+    row = event_consistency(to_frame(wide)).iloc[0]
+    assert abs(row["deviation"]) > 0.02      # still off at the mid
+    assert not row["tradeable"]              # but gone once you pay the spread
+    assert row["net_edge"] == 0.0
+
+
+def test_underpriced_baskets_rank_alongside_overpriced_ones():
+    """Sorting on signed deviation buried the long arb at the bottom of the list."""
+    cheap = [dict(m, outcomePrices='["0.20","0.80"]', spread=0.001,
+                  events=[{"id": "E3", "title": "Cheap"}]) for m in MARKETS[:3]]
+    out = event_consistency(to_frame(MARKETS + cheap))
+    assert out.iloc[0]["event_title"] == "Cheap"   # 0.6 sum, biggest capturable edge
+    assert out.iloc[0]["long_edge"] > 0

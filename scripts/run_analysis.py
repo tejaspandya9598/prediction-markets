@@ -26,9 +26,13 @@ def main() -> None:
         print(f"  {k:<22} {v:,.2f}" if isinstance(v, float) else f"  {k:<22} {v}")
 
     arb = event_consistency(df)
-    print(f"\nNeg-risk arbitrage candidates (outcome prices off 1): {len(arb)}")
+    tradeable = int(arb["tradeable"].sum()) if not arb.empty else 0
+    print(f"\nNeg-risk events off 1 at the mid: {len(arb)}"
+          f"  |  still profitable after crossing the spread: {tradeable}")
     if not arb.empty:
-        print(arb.head(10).to_string(index=False))
+        cols = ["event_title", "n_outcomes", "yes_sum", "deviation", "net_edge",
+                "tradeable", "volume"]
+        print(arb.head(10)[cols].to_string(index=False))
 
     out = ROOT / "reports"
     (out / "figures").mkdir(parents=True, exist_ok=True)
