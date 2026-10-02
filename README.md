@@ -63,11 +63,12 @@ is among the legs you hold. The 2028 nominee events carry 128 legs each, of whic
 riskless arbitrages. The short-side rows (Pro Football, UEFA, EPL) stand.
 
 The scanner now counts every leg of the event, takes the long side only from complete
-baskets, and keeps the short side either way. Re-run on 2026-10-02: 198 events, 4,923
-live legs; 23 baskets more than 2% off 1 at the mid, 10 still positive after crossing
-the spread, the largest 2.2% (Anthropic IPO closing market cap, 10 legs, all live).
-Before the fix the same run reported the Nobel Peace Prize 2026 event (32 live legs of
-71, priced at 0.613) as a 32% arbitrage.
+baskets, and keeps the short side either way. On the committed 2026-10-02 snapshot
+(`data/snapshots/2026-10-02`, replay with `--snapshot`): 200 events, 5,342 live legs;
+15 baskets more than 2% off 1 at the mid, 8 still positive after crossing the spread,
+the largest 1.7% (views of the next MrBeast video, 7 legs, all live, an overround you
+sell). Before the fix an earlier pull the same morning reported the Nobel Peace Prize
+2026 event (32 live legs of 71, priced at 0.613) as a 32% arbitrage.
 
 ## What it computes
 
@@ -107,11 +108,13 @@ betting and options markets alike.
 ```bash
 uv sync
 uv run python scripts/run_analysis.py   # live Polymarket pull -> summary, arb list, figures
+uv run python scripts/run_analysis.py --snapshot data/snapshots/2026-10-02   # replay offline
 uv run pytest                           # analysis logic on a fixture (offline)
 ```
 
-The first run pulls live markets from the Polymarket Gamma API and caches them; output
-(summary, `arbitrage_candidates.csv`, charts) lands in `reports/`.
+A live run pulls markets and events from the Polymarket Gamma API and saves the payload
+to `data/snapshots/<date>/` (about 3 MB gzipped), so any published table can be replayed
+exactly; output (summary, `arbitrage_candidates.csv`, charts) lands in `reports/`.
 
 ## Structure
 

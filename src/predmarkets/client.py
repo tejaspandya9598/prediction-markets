@@ -8,6 +8,7 @@ request for 400, and a cache from last month does not describe today's book.
 """
 from __future__ import annotations
 
+import gzip
 import json
 import time
 from pathlib import Path
@@ -16,6 +17,7 @@ import requests
 
 GAMMA = "https://gamma-api.polymarket.com"
 CACHE = Path(__file__).resolve().parents[2] / "data" / "markets.json"
+SNAPSHOTS = Path(__file__).resolve().parents[2] / "data" / "snapshots"
 
 # Gamma caps a page at 100 no matter what `limit` asks for. Requesting 400 returns
 # 100, so a paginator that stops when a page comes back shorter than requested stops
@@ -73,3 +75,27 @@ def load_markets(limit: int = 400, use_cache: bool = True,
     CACHE.parent.mkdir(parents=True, exist_ok=True)
     CACHE.write_text(json.dumps(markets))
     return markets
+
+
+def save_snapshot(markets: list[dict], events: list[dict], day: str) -> Path:
+    """Write one live pull to data/snapshots/<day>/ so the run can be replayed.
+
+    The book moves by the minute, so a published table is reproducible only from the
+    payload it was computed on. Gzipped JSON: about 3 MB for 400 markets and 200 events.
+    """
+    out = SNAPSHOTS / day
+    out.mkdir(parents=True, exist_ok=True)
+    for name, payload in (("markets", markets), ("events", events)):
+        with gzip.open(out / f"{name}.json.gz", "wt", encoding="utf-8") as fh:
+            json.dump(payload, fh)
+    return out
+
+
+def load_snapshot(path: str | Path) -> tuple[list[dict], list[dict]]:
+    """Read a snapshot written by `save_snapshot`: (markets, events)."""
+    path = Path(path)
+    with gzip.open(path / "markets.json.gz", "rt", encoding="utf-8") as fh:
+        markets = json.load(fh)
+    with gzip.open(path / "events.json.gz", "rt", encoding="utf-8") as fh:
+        events = json.load(fh)
+    return markets, events
