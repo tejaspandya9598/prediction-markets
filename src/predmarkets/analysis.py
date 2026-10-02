@@ -7,7 +7,7 @@ Turn raw Polymarket markets into tradeable signals.
                             1, there's a static arbitrage (short the overpriced basket).
   * `summary`             — book-wide stats, incl. the favorite-longshot price spread.
 
-The mid price says whether an event is *inconsistent*. Whether it is *tradeable* is a
+The mid-price says whether an event is *inconsistent*. Whether it is *tradeable* is a
 different question, and one the quoted spread answers: you buy the basket at the asks
 and sell it at the bids, so a 2c dislocation across three legs quoting 3c wide is not
 an arbitrage, it's a fee. `event_consistency` reports both.
