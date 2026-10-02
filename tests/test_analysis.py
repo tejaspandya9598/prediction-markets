@@ -113,7 +113,7 @@ def test_partial_baskets_are_not_reported_as_arbitrage():
     assert out.empty or not out["complete"].any()
 
 
-def test_events_to_frame_counts_live_legs_only():
+def test_events_to_frame_counts_every_leg_and_the_live_ones():
     from predmarkets.analysis import events_to_frame
 
     legs = [{"groupItemTitle": "A", "outcomePrices": '["0.6","0.4"]', "spread": 0.01,
@@ -123,6 +123,38 @@ def test_events_to_frame_counts_live_legs_only():
             {"groupItemTitle": "Other", "outcomePrices": '["0.5","0.5"]', "spread": 1,
              "volumeNum": 0, "active": False}]
     df = events_to_frame([{"id": "E", "title": "T", "negRisk": True, "markets": legs}])
-    assert len(df) == 2 and df["n_event_markets"].iloc[0] == 2
+    assert len(df) == 2                              # the placeholder is not priced in
+    assert df["n_event_markets"].iloc[0] == 3        # but it is still an outcome
     out = event_consistency(df, threshold=0.0)
-    assert out["complete"].all()
+    assert not out["complete"].any()
+
+
+def _event(prices, extra_dead=0, eid="E"):
+    legs = [{"groupItemTitle": f"L{i}", "outcomePrices": f'["{p:.3f}","{1 - p:.3f}"]',
+             "spread": 0.002, "volumeNum": 1000, "active": True} for i, p in enumerate(prices)]
+    legs += [{"groupItemTitle": f"D{i}", "outcomePrices": '["0.5","0.5"]', "spread": 1,
+              "volumeNum": 0, "active": False} for i in range(extra_dead)]
+    return {"id": eid, "title": eid, "negRisk": True, "markets": legs}
+
+
+def test_long_basket_with_untradeable_legs_is_not_an_arbitrage():
+    """Buying every LIVE leg of a cheap basket only pays $1 if one of them wins.
+    The Nobel Peace Prize 2026 event (2026-10-02) had 32 live legs out of 71 and
+    priced to 0.613; it was reported as a 32% riskless arbitrage."""
+    from predmarkets.analysis import events_to_frame
+
+    out = event_consistency(events_to_frame([_event([0.3, 0.2, 0.1], extra_dead=4)]))
+    assert out.empty or not out["tradeable"].any()
+
+    whole = event_consistency(events_to_frame([_event([0.3, 0.2, 0.1])]))
+    assert whole.iloc[0]["tradeable"] and whole.iloc[0]["long_edge"] > 0
+
+
+def test_short_basket_survives_untradeable_legs():
+    """Selling an overpriced basket of live legs is riskless even if a dead leg
+    exists: if that outcome wins, every sold leg expires worthless. The EPL 2027
+    case: real legs at 1.04 alongside four placeholders."""
+    from predmarkets.analysis import events_to_frame
+
+    out = event_consistency(events_to_frame([_event([0.6, 0.5], extra_dead=4)]))
+    assert len(out) == 1 and out.iloc[0]["tradeable"] and out.iloc[0]["short_edge"] > 0

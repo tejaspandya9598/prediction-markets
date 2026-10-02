@@ -50,7 +50,24 @@ familiar bookmaker's margin. A basket at 0.9265 that pays 1.00 in 2028, though, 
 not free money — it is roughly 8% over about two and a quarter years, or ~3.4%
 annualised, which is what you would want for locking up collateral that long. Most
 of the "arbitrage" at the top of this table is the time value of money, and a scanner
-that reports it as edge is measuring the discount rate.
+that reports it as edge is measuring the discount rate. It is also, as the correction
+below shows, a basket with outcomes missing.
+
+### Correction (2026-10-02)
+
+The table above treated a basket as complete when every *live* leg was present. That
+is enough to sell an overpriced basket (if an outcome you did not sell wins, every leg
+you sold expires worthless), but not to buy a cheap one: $1 arrives only if the winner
+is among the legs you hold. The 2028 nominee events carry 128 legs each, of which 42
+(Republican) and 53 (Democratic) are live today, so the long-side rows above were not
+riskless arbitrages. The short-side rows (Pro Football, UEFA, EPL) stand.
+
+The scanner now counts every leg of the event, takes the long side only from complete
+baskets, and keeps the short side either way. Re-run on 2026-10-02: 198 events, 4,923
+live legs; 23 baskets more than 2% off 1 at the mid, 10 still positive after crossing
+the spread, the largest 2.2% (Anthropic IPO closing market cap, 10 legs, all live).
+Before the fix the same run reported the Nobel Peace Prize 2026 event (32 live legs of
+71, priced at 0.613) as a 32% arbitrage.
 
 ## What it computes
 
@@ -70,9 +87,10 @@ If $\sum_i \text{ask}_i < 1$, buying one YES of everything costs less than the \
 the winning outcome must pay — a static long arbitrage of $1 - \sum \text{ask}_i$
 gross. If $\sum_i \text{bid}_i > 1$, selling the basket locks in the overround
 $\sum \text{bid}_i - 1$ the same way. Both are riskless at expiry regardless of the
-outcome, which is what distinguishes them from a directional bet; the scanner ranks
-events by $|\,1 - \sum p_i\,|$ and available volume, and the report nets estimated
-fees before calling anything a candidate.
+outcome, provided the long basket holds every outcome of the event; that is what
+distinguishes them from a directional bet. The scanner ranks events by the edge left
+after crossing the quoted spread on every leg, then by $|\,1 - \sum p_i\,|$. Exchange
+fees and gas are not netted.
 
 The favorite-longshot distribution view comes from the same identity: with prices as
 implied probabilities, systematic overpricing of low-probability outcomes shows up
@@ -109,11 +127,12 @@ prediction-markets/
 
 ## Notes
 
-- **Real data, no synthetic.** Markets come live from Polymarket; the unit tests run on
-  a small fixture shaped like the real API response so the arbitrage logic is checked
-  deterministically and offline.
-- Arbitrage figures are gross of fees and gas; treat flagged events as candidates to
-  size against the book, not free money.
+- **Live data for the scan, fixtures for the tests.** Markets come live from Polymarket;
+  the 12 unit tests run on fixtures shaped like the real API response, so the
+  arbitrage logic is checked deterministically and offline.
+- Edges are net of the quoted spread but gross of fees and gas, and the bid/ask is
+  inferred as mid ± half the quoted spread rather than read from the book. Treat flagged
+  events as candidates to size against the book, not free money.
 
 ---
 

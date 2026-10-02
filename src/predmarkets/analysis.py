@@ -90,8 +90,15 @@ def event_consistency(df: pd.DataFrame, threshold: float = 0.02) -> pd.DataFrame
 
     `deviation` is the mid-price dislocation. `long_edge` / `short_edge` are what
     survives crossing the quoted spread on every leg — buy the basket at the asks
-    for 1 - Σask, sell it at the bids for Σbid - 1. `net_edge` is the better of the
-    two, floored at zero, and `tradeable` is whether anything is left at all.
+    for 1 - Σask, sell it at the bids for Σbid - 1.
+
+    The two sides need different things. Selling an overpriced basket is riskless
+    with or without the dead legs: if an outcome you did not sell wins, every leg
+    you did sell expires worthless. Buying a cheap basket pays $1 only if the winner
+    is in it, so the long side counts only when `complete` — every leg of the event
+    live and held. The Nobel Peace Prize 2026 event priced its 32 live legs (of 71)
+    at 0.613 on 2026-10-02, and counting live legs as the whole event reported that
+    as a 32% riskless arbitrage. `net_edge` is the better usable side, floored at 0.
     """
     rows = []
     neg = df[df["neg_risk"] & (df["event_id"] != NO_EVENT)]
@@ -111,20 +118,23 @@ def event_consistency(df: pd.DataFrame, threshold: float = 0.02) -> pd.DataFrame
         bid_sum = (g["yes"] - half).sum()
         long_edge = 1.0 - ask_sum        # buy every outcome, collect $1 at expiry
         short_edge = bid_sum - 1.0       # sell the basket, pay $1 at expiry
-        net_edge = max(long_edge, short_edge, 0.0)
+        usable_long = long_edge if complete else 0.0
+        net_edge = max(usable_long, short_edge, 0.0)
         rows.append({"event_title": title, "n_outcomes": len(g),
                      "n_event_markets": expected, "complete": complete,
                      "yes_sum": yes_sum,
                      "deviation": yes_sum - 1.0, "ask_sum": ask_sum, "bid_sum": bid_sum,
                      "long_edge": long_edge, "short_edge": short_edge,
-                     "net_edge": net_edge, "tradeable": complete and net_edge > 0.0,
+                     "net_edge": net_edge, "tradeable": net_edge > 0.0,
                      "volume": g["volume"].sum()})
     out = pd.DataFrame(rows)
     if out.empty:
         return out
     # Rank on what you could actually capture, then on the raw dislocation. Sorting
     # on signed deviation buried the underpriced baskets, which are the long arb.
-    hits = out[(out["deviation"].abs() > threshold) & out["complete"]]
+    # A partial basket is still worth reporting when it is overpriced (the short side
+    # does not need every leg); an underpriced partial basket is not an arbitrage.
+    hits = out[(out["deviation"].abs() > threshold) & (out["complete"] | (out["deviation"] > 0))]
     return hits.sort_values(["net_edge", "deviation"],
                             key=lambda c: c.abs() if c.name == "deviation" else c,
                             ascending=False)
@@ -133,12 +143,15 @@ def event_consistency(df: pd.DataFrame, threshold: float = 0.02) -> pd.DataFrame
 def events_to_frame(events: list[dict]) -> pd.DataFrame:
     """Flatten `/events` payloads, keeping each event's complete market list.
 
-    Every row carries `n_event_markets`, the number of legs the event actually has,
-    so a basket assembled here can be checked for completeness rather than assumed.
+    Every row carries `n_event_markets`, the number of legs the event actually has
+    (placeholders and untraded legs included, since any of them can still win), so a
+    basket of live legs can be checked for completeness rather than assumed.
     """
     rows = []
+    totals: dict[str, int] = {}
     for ev in events:
         markets = ev.get("markets") or []
+        totals[str(ev.get("id"))] = len(markets)
         for m in markets:
             m = dict(m)
             m.setdefault("events", [{"id": ev.get("id"), "title": ev.get("title")}])
@@ -148,10 +161,9 @@ def events_to_frame(events: list[dict]) -> pd.DataFrame:
     if df.empty:
         df["n_event_markets"] = pd.Series(dtype=int)
         return df
-    # Count the legs that survived the liveness filter, so "complete" means
-    # "every tradeable outcome", not "every row the API returned".
-    counts = df.groupby("event_id").size().to_dict()
-    df["n_event_markets"] = df["event_id"].astype(str).map(counts).fillna(0).astype(int)
+    # Every leg the event has, live or not. Counting only the legs that survived the
+    # liveness filter made every basket look complete (2026-10-02 audit).
+    df["n_event_markets"] = df["event_id"].astype(str).map(totals).fillna(0).astype(int)
     return df
 
 
