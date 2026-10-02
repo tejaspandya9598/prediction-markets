@@ -9,10 +9,10 @@ real edge — **cross-outcome arbitrage** on multi-outcome (neg-risk) events.
 The outcomes of a neg-risk event are mutually exclusive and exhaustive, so their YES
 prices must sum to ~1. When they don't, there's a **static arbitrage**: if three
 mutually-exclusive outcomes price at 0.5 / 0.4 / 0.2 (sum 1.1), shorting the basket
-locks in the 0.10 overround (minus fees). `event_consistency` scans every event for
-exactly this and ranks the deviations by size and volume.
+locks in the 0.10 overround before fees. `event_consistency` scans every event for
+exactly this and ranks events by the edge left after crossing the spread.
 
-Getting a believable answer out of this takes three filters that the arithmetic
+Getting a believable answer out of this takes four rules that the arithmetic
 alone does not suggest, and each of them was found by running it against the live
 book rather than by reasoning about it.
 
@@ -22,53 +22,44 @@ you whichever legs happened to land in that page: the Democratic Nominee 2028 ev
 has 51 outcomes, five of them showed up, they summed to 0.0095, and that reported as
 a 99% arbitrage.
 
-**Live legs only.** Polymarket carries untraded placeholders inside multi-outcome
-events — the EPL 2027 Champion event ships "Team A", "Team B", "Team C" and "Other",
-each `active=False`, zero volume, zero liquidity, spread quoted at 1.00 and price
-pinned at the 0.5/0.5 default. Four of those summed with 20 real legs put the basket
-at 3.04 instead of 1.04.
+**Live legs priced, every leg counted.** Polymarket carries untraded placeholders inside
+multi-outcome events — the EPL 2027 Champion event ships "Team A", "Team B", "Team C" and
+"Other", each `active=False`, zero volume, zero liquidity, spread quoted at 1.00 and price
+pinned at the 0.5/0.5 default. Four of those summed with 20 real legs put the basket at
+3.04 instead of 1.04, so placeholders are left out of the price sum. They still count
+toward the event's size, though, because a dropped outcome can still win.
+
+**Long only from complete baskets.** Selling an overpriced basket is riskless even with
+legs missing: if an outcome you did not sell wins, every leg you sold expires worthless.
+Buying a cheap one pays $1 only if the winner is among the legs you hold, so the long
+side is taken only when every outcome of the event is live. Without this rule a Nobel
+Peace Prize basket holding 32 of its 71 outcomes, priced at 0.613, reported as a 32%
+riskless arbitrage; two tests pin the rule.
 
 **Net of the spread.** You buy the basket at the asks and sell it at the bids, so the
 edge is `1 - Σask` or `Σbid - 1`, not the mid-price deviation. On the UEFA event a
 5.8% dislocation at the mid survives as 0.7% after crossing 36 books.
 
-With all three, from a live run on 2026-09-02 (200 events, 3,367 live legs):
+With all four, on the committed 2026-10-02 snapshot (200 events, 5,342 live legs;
+replay with `--snapshot data/snapshots/2026-10-02`), 15 baskets sit more than 2% off 1 at
+the mid and 8 are still positive after crossing the spread:
 
-| event | outcomes | Σ YES | deviation | net edge | volume |
-|---|--:|--:|--:|--:|--:|
-| Republican Presidential Nominee 2028 | 42 | 0.9265 | −0.0735 | **5.0%** | $694M |
-| Democratic Presidential Nominee 2028 | 51 | 0.9370 | −0.0630 | **3.4%** | $1,271M |
-| Pro Football: 2027 Champion | 32 | 1.0500 | +0.0500 | 1.8% | $49M |
-| F1 Drivers' Champion | 22 | 0.9710 | −0.0290 | 1.7% | $202M |
-| UEFA Champions League: 2027 Champion | 36 | 1.0575 | +0.0575 | 0.7% | $22M |
-| EPL: 2027 Champion | 20 | 1.0355 | +0.0355 | 0.3% | $14M |
+| event | outcomes | Σ YES | deviation | net edge | side | volume |
+|---|--:|--:|--:|--:|---|--:|
+| # of views of next MrBeast video on day 1? | 7 | 1.0530 | +0.0530 | **1.7%** | sell | $0.08M |
+| Balance of Power: 2026 Midterms | 5 | 1.0250 | +0.0250 | 0.9% | sell | $15.5M |
+| Brazil 1st round: Renan Santos vote share | 5 | 1.0275 | +0.0275 | 0.5% | sell | $0.23M |
+| Pro Football: 2027 Champion | 32 | 1.0360 | +0.0360 | 0.3% | sell | $62.7M |
+| Fed Decision in December? | 5 | 0.9770 | −0.0230 | 0.3% | buy | $2.5M |
+| Worlds 2026: Winner | 18 | 1.0600 | +0.0600 | 0.3% | sell | $0.24M |
+| Which company has best AI model end of 2026? | 15 | 1.0325 | +0.0325 | 0.1% | sell | $2.0M |
+| Brazil 1st round: margin of victory | 11 | 1.0325 | +0.0325 | 0.1% | sell | $0.81M |
 
-The sums now sit where a probability measure should, and the sign splits along a
-line worth noticing: **the sports books trade above 1 and the long-dated political
-books trade below it.** An overround on a season that settles within the year is the
-familiar bookmaker's margin. A basket at 0.9265 that pays 1.00 in 2028, though, is
-not free money — it is roughly 8% over about two and a quarter years, or ~3.4%
-annualised, which is what you would want for locking up collateral that long. Most
-of the "arbitrage" at the top of this table is the time value of money, and a scanner
-that reports it as edge is measuring the discount rate. It is also, as the correction
-below shows, a basket with outcomes missing.
-
-### Correction (2026-10-02)
-
-The table above treated a basket as complete when every *live* leg was present. That
-is enough to sell an overpriced basket (if an outcome you did not sell wins, every leg
-you sold expires worthless), but not to buy a cheap one: $1 arrives only if the winner
-is among the legs you hold. The 2028 nominee events carry 128 legs each, of which 42
-(Republican) and 53 (Democratic) are live today, so the long-side rows above were not
-riskless arbitrages. The short-side rows (Pro Football, UEFA, EPL) stand.
-
-The scanner now counts every leg of the event, takes the long side only from complete
-baskets, and keeps the short side either way. On the committed 2026-10-02 snapshot
-(`data/snapshots/2026-10-02`, replay with `--snapshot`): 200 events, 5,342 live legs;
-15 baskets more than 2% off 1 at the mid, 8 still positive after crossing the spread,
-the largest 1.7% (views of the next MrBeast video, 7 legs, all live, an overround you
-sell). Before the fix an earlier pull the same morning reported the Nobel Peace Prize
-2026 event (32 live legs of 71, priced at 0.613) as a 32% arbitrage.
+Almost every survivor is an overround you sell, the bookmaker's margin on a book that
+settles soon, and the edges are a fraction of a percent once the spread is paid. A
+dislocation at the mid is mostly spread: Latvia vs Montenegro's exact-score book sums to
+1.46 and still leaves nothing after crossing it. These are gross of fees and gas, and
+they are candidates to size against the book, not free money.
 
 ## What it computes
 
